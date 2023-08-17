@@ -1,8 +1,12 @@
+<svelte:head>
+    <title>Swaranjali - Home</title>
+</svelte:head>
+
 <main>
     <section id="hero-section">
         <figure>
-            <center><img id="logo" src="swaranjali_logo_inverted_dotfix_removebg.png" alt="Swaranjali"></center>
-            <figcaption>The Indian music and dance club of<br>Bits Pilani, Hyderabad Campus.</figcaption>
+            <center><img id="logo" src="logo/swaranjali_logo_inverted_dotfix_removebg.png" alt="Swaranjali"></center>
+            <figcaption>The Indian music and dance club of<br>Bits Pilani, Hyderabad Campus</figcaption>
         </figure>
     </section>
 </main>
@@ -13,7 +17,9 @@
     :global(body) { margin: 0; padding: 0; } 
 
     #hero-section {
-        background-image: url( 'bg_cropped.png' );
+        background-image: linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ), url(
+              'music/music_bg_2_crop.JPG'
+        ); /* 'dance/dance_bg_3_crop.JPG' */
         background-position: center;
         background-size: cover;
         height: 100vh;
@@ -22,12 +28,12 @@
     }
 
     #logo {
-        filter: drop-shadow(0 0 1em rgb(128, 128, 128));
+        filter: drop-shadow(0 0 5px black)  drop-shadow(0 0 2em rgb(90, 90, 90));
         width: 70%;
     }
 
     figcaption {
-        filter: drop-shadow(0 0 5px black);
+        filter: drop-shadow(0 0 3px black);
         padding: 20px;
         text-align: center;
         color: white;
