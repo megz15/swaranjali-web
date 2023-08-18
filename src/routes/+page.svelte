@@ -2,13 +2,12 @@
     <title>Swaranjali - Home</title>
 </svelte:head>
 
-<script>
+<script lang="ts">
     import NavBar from '../components/navbar.svelte';
 </script>
 
 <main>
-
-    <NavBar/>
+    <NavBar pageIndex={0}/>
 
     <section id="hero-section">
         <figure>
