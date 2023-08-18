@@ -2,7 +2,14 @@
     <title>Swaranjali - Home</title>
 </svelte:head>
 
+<script>
+    import NavBar from '../components/navbar.svelte';
+</script>
+
 <main>
+
+    <NavBar/>
+
     <section id="hero-section">
         <figure>
             <center><img id="logo" src="logo/swaranjali_logo_inverted_dotfix_removebg.png" alt="Swaranjali"></center>
@@ -39,5 +46,11 @@
         color: white;
         font-size: 26px;
         font-family: 'Ruwudu', serif;
+    }
+
+    @media (max-height: 475px) or (max-width: 340px){
+        figcaption {
+            display: none;
+        }
     }
 </style>
