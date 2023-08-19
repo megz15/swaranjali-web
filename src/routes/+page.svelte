@@ -7,7 +7,8 @@
 </script>
 
 <main>
-    <NavBar pageIndex={0}/>
+
+    <NavBar pageIndex={0} position="bottom"/>
 
     <section id="hero-section">
         <figure>
@@ -15,12 +16,17 @@
             <figcaption>The Indian music and dance club of<br>Bits Pilani, Hyderabad Campus</figcaption>
         </figure>
     </section>
+
+    <section id="about-section">
+        <h1>About</h1>
+        <p>Lorem Ipsum Dolor Sit Amet</p>
+    </section>
 </main>
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Ruwudu:wght@500&display=swap');
 
-    :global(body) { margin: 0; padding: 0; } 
+    :global(body) { margin: 0; }
 
     #hero-section {
         background-image: linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ), url(
