@@ -3,6 +3,7 @@
 </svelte:head>
 
 <script lang="ts">
+    import MemberCard from '../components/member_card.svelte';
     import NavBar from '../components/navbar.svelte';
 </script>
 
@@ -21,6 +22,20 @@
         <h1>About</h1>
         <p>Lorem Ipsum Dolor Sit Amet</p>
     </section>
+
+    <section id="members-section">
+        <h1>Members</h1>
+        <MemberCard
+            url="https://i.imgur.com/vnKRYIl.png"
+            name="Meghraj Goswami"
+            position="Music Head"
+            tags={{cat:'Music',bat:'2022',pos:'Member'}}
+        />
+    </section>
+
+    <section id="test-section">
+        <h1>test</h1>
+    </section>
 </main>
 
 <style>
@@ -29,7 +44,7 @@
     :global(body) { margin: 0; }
 
     #hero-section {
-        background-image: linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ), url(
+        background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8)), url(
               'music/music_bg_2_crop.JPG'
         ); /* 'dance/dance_bg_3_crop.JPG' */
         background-position: center;

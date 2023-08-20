@@ -3,9 +3,9 @@
     import { browser } from '$app/environment';
     
     export let pageIndex:number;
-    export let position:String;
+    export let position:string;
 
-    const navLinks:String[] = ['Home', 'NaadGen', 'Gallery', 'Social', 'Recordings'];
+    const navLinks:string[] = ['Home', 'NaadGen', 'Gallery', 'Social', 'Recordings'];
     let isScrolled:boolean = false;
 
     if (browser) {
@@ -50,7 +50,7 @@
     .dark { background: #1d2230b9 }
     .light { background: rgba(255, 255, 255, 0.5); }
 
-    .active { font-weight: bold; }
+    .active { font-weight: bold; color: white; }
 
     a {
         color: rgba(255, 255, 255, 0.75);
