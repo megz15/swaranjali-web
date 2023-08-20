@@ -26,50 +26,52 @@
         </figure>
     </section>
 
-    <section id="about-section">
-        <h1>About</h1>
-        <p>Lorem Ipsum Dolor Sit Amet</p>
-    </section>
+    <section id="parallax-background">
+        <section id="about-section">
+            <h1>About</h1>
+            <p>Lorem Ipsum Dolor Sit Amet</p>
+        </section>
 
-    <section id="members-section">
-        <MemberCard
-            url="https://i.imgur.com/vnKRYIl.png"
-            name="Meghraj Goswami"
-            position="Music Head"
-            tags={{ cat: "Music", bat: "2022", pos: "Enthusiast" }}
-        />
+        <section id="members-section">
+            <MemberCard
+                url="https://i.imgur.com/vnKRYIl.png"
+                name="Meghraj Goswami"
+                position="Music Head"
+                tags={{ cat: "Music", bat: "2022", pos: "Enthusiast" }}
+            />
 
-        <MemberCard
-            url="https://i.imgur.com/5MDyx3v.png"
-            name="Onabheek Ghosh"
-            position="Media Head"
-            tags={{ cat: "Music", bat: "2022", pos: "Member" }}
-        />
+            <MemberCard
+                url="https://i.imgur.com/5MDyx3v.png"
+                name="Onabheek Ghosh"
+                position="Media Head"
+                tags={{ cat: "Music", bat: "2022", pos: "Member" }}
+            />
 
-        <MemberCard
-            url="https://i.imgur.com/3b4f5bZ.png"
-            name="Manasvi Chervela"
-            position="Treasurer"
-            tags={{ cat: "Music", bat: "2022", pos: "Senate" }}
-        />
+            <MemberCard
+                url="https://i.imgur.com/3b4f5bZ.png"
+                name="Manasvi Chervela"
+                position="Treasurer"
+                tags={{ cat: "Music", bat: "2022", pos: "Senate" }}
+            />
 
-        <MemberCard
-            url="https://i.imgur.com/Y6JH6TX.png"
-            name="Khushi Kamtam"
-            position="Dance Head"
-            tags={{ cat: "Dance", bat: "2022", pos: "Member" }}
-        />
+            <MemberCard
+                url="https://i.imgur.com/Y6JH6TX.png"
+                name="Khushi Kamtam"
+                position="Dance Head"
+                tags={{ cat: "Dance", bat: "2022", pos: "Member" }}
+            />
 
-        <MemberCard
-            url="https://i.imgur.com/WspOiaD.png"
-            name="Mureta Primal"
-            position="Secretary"
-            tags={{ cat: "Music", bat: "2021", pos: "Senate" }}
-        />
-    </section>
+            <MemberCard
+                url="https://i.imgur.com/WspOiaD.png"
+                name="Mureta Primal"
+                position="Secretary"
+                tags={{ cat: "Music", bat: "2021", pos: "Senate" }}
+            />
+        </section>
 
-    <section id="test-section">
-        <h1>test</h1>
+        <section id="test-section">
+            <h1>test</h1>
+        </section>
     </section>
 </main>
 
@@ -78,7 +80,6 @@
 
     :global(body) {
         margin: 0;
-        background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.8)), url("glyphs.png");
     }
 
     #logo {
@@ -101,13 +102,24 @@
         }
     }
 
+    #parallax-background {
+        background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.8)),
+            url("glyphs.png");
+        background-attachment: fixed;
+        background-position: center;
+    }
+
+    h1 {
+        margin: 0;
+    }
+
     #hero-section {
         background-image: linear-gradient(
                 to bottom,
                 transparent,
                 rgba(0, 0, 0, 0.8)
             ),
-            url("music/music_bg_2_crop.JPG"); /* 'dance/dance_bg_3_crop.JPG' */
+            url("music/music_bg_2_crop.JPG");
         background-position: center;
         background-size: cover;
         height: 100vh;
