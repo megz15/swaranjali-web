@@ -35,12 +35,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 400px;
+        width: 360px;
         height: 400px;
-        background-color: #12121F;
+        background-color: rgb(18, 18, 31, 0.8);
+        backdrop-filter: blur(6px);
         color: #f3e9de;
         border-radius: 28px;
-        box-shadow: 5px 5px 8px #12121F;
+        box-shadow: 5px 5px 8px rgb(18, 18, 31, 0.8);
     }
 
     .pfp {
@@ -49,15 +50,14 @@
     }
 
     h2 {
-        margin-top: 24px;
-        margin-bottom: 0;
+        margin: 24px 0 0;
         font-size: 28px;
     }
 
     h3 {
-        margin-top: 0;
-        margin-bottom: 42px;
+        margin:0 0 42px;
         font-size: 20px;
+        color: #FFDE59;
     }
 
     .tags {
@@ -66,7 +66,6 @@
     }
 
     .tags span {
-        /* background-color: cyan; */
         color: black;
         padding: 8px 24px 8px 24px;
         border-radius: 8px;
