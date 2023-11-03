@@ -12,6 +12,8 @@
         "hero-bg/dance_4.JPG",
     ];
 
+    let glyphImage = "assets/glyphs.png"
+
     let bgImageIndex = 0;
 
     let memberData = [
@@ -131,7 +133,10 @@
         </figure>
     </section>
 
-    <div id="parallax-background">
+    <div id="parallax-background" style="
+        background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.8)),
+        url({glyphImage});"
+    >
         <!-- <section id="about-section">
             <h1>About</h1>
             <p>Lorem Ipsum Dolor Sit Amet</p>
@@ -180,8 +185,6 @@
     }
 
     #parallax-background {
-        background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.8)),
-            url("assets/glyphs.png");
         background-attachment: fixed;
         background-position: center;
     }
