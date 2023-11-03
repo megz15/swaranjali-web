@@ -40,11 +40,6 @@
 </main>
 
 <style>
-
-    * {
-        user-select: none;
-    }
-
     .card {
         display: flex;
         flex-direction: column;
@@ -67,12 +62,8 @@
     h2 {
         margin: 24px 0 0;
         font-size: 28px;
-    }
-
-    h2:hover {
         cursor: pointer;
     }
-
     h3 {
         margin: 0 0 42px;
         font-size: 20px;

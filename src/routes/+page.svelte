@@ -125,8 +125,8 @@
                 /></center
             >
             <figcaption>
-                The Indian music and dance club of<br />Bits Pilani, Hyderabad
-                Campus
+                The Indian music and dance club of<br />
+                Bits Pilani, Hyderabad Campus
             </figcaption>
         </figure>
     </section>
@@ -155,11 +155,13 @@
 
     :global(body) {
         margin: 0;
+        user-select: none;
     }
 
     #logo {
         filter: drop-shadow(0 0 5px black) drop-shadow(0 0 2em rgb(90, 90, 90));
         width: 70%;
+        cursor: pointer;
     }
 
     figcaption {
@@ -197,6 +199,14 @@
         justify-content: center;
         align-items: center;
         box-shadow: 0px 10px 20px black;
+    }
+
+    @media screen and (max-width: 768px) {
+        #hero-section {
+            height: 50vh
+            /* background-size: contain;
+            background-position: top; */
+        }
     }
 
     #members-section {
