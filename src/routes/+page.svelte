@@ -23,21 +23,27 @@
             tags: { cat: "Music", bat: "2021", pos: "Senate" },
             names: [
                 "Muruga Perumal",
-                "Mureta Primal",
                 "Merugoon Tirumal",
+                "Margaya Perumal",
+                "Bhag gaya Perumal",
+                "Murmura Perumal",
+                "Marunga Perumal",
                 "Merugu Pidugu",
                 "Merufeet Per-umal",
                 "Margarita Perumal",
                 "Mureta Primal",
-                "Murmura Perumal",
-                "Marunga Perumal",
             ],
         },
         {
             pfp_url: "https://i.imgur.com/5dKVI5o.png",
             position: "Joint Secretary",
             tags: { cat: "Music", bat: "2021", pos: "Senate" },
-            names: ["Antara Ghosh", "Send Moms"],
+            names: [
+                "Antara Ghosh",
+                "Send Moms",
+                "Antara Ghosh",
+                "Send Mom",
+            ],
         },
         {
             pfp_url: "https://i.imgur.com/3b4f5bZ.png",
@@ -87,11 +93,11 @@
             names: [
                 "Meghraj Goswami",
                 "Meghlite Noswami",
-                "Meghu Rajan",
                 "Enthu (n=3)x",
                 "feeeeeeeeeet",
                 "Manoj Saroj",
-                "Meghraj Gos 'W' Ami",
+                "Meghu Rajan",
+                "Meghraj W Ami",
             ],
         },
     ];
@@ -188,11 +194,6 @@
         background-attachment: fixed;
         background-position: center;
     }
-
-    h1 {
-        margin: 0;
-    }
-
     #hero-section {
         background-position: center;
         background-size: cover;
