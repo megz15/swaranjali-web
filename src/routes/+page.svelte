@@ -2,6 +2,18 @@
     import MemberCard from "../components/member_card.svelte";
     import NavBar from "../components/navbar.svelte";
 
+    let bgImages = [
+        "hero-bg/music_1.JPG",
+        "hero-bg/dance_1.JPG",
+        "hero-bg/music_2.JPG",
+        "hero-bg/dance_2.JPG",
+        "hero-bg/music_3.JPG",
+        "hero-bg/dance_3.JPG",
+        "hero-bg/dance_4.JPG",
+    ];
+
+    let bgImageIndex = 0;
+
     let memberData = [
         {
             pfp_url: "https://i.imgur.com/WspOiaD.png",
@@ -23,10 +35,7 @@
             pfp_url: "https://i.imgur.com/5dKVI5o.png",
             position: "Joint Secretary",
             tags: { cat: "Music", bat: "2021", pos: "Senate" },
-            names: [
-                "Antara Ghosh",
-                "Send Moms",
-            ],
+            names: ["Antara Ghosh", "Send Moms"],
         },
         {
             pfp_url: "https://i.imgur.com/3b4f5bZ.png",
@@ -43,10 +52,7 @@
             pfp_url: "https://i.imgur.com/Y6JH6TX.png",
             position: "Dance Head",
             tags: { cat: "Dance", bat: "2022", pos: "Member" },
-            names: [
-                "Khushi Kamtam",
-                "feeeeeeeeeet",
-            ],
+            names: ["Khushi Kamtam", "feeeeeeeeeet"],
         },
         {
             pfp_url: "https://i.imgur.com/1Q6CGcA.png",
@@ -58,29 +64,19 @@
             pfp_url: "https://i.imgur.com/cyYCTFG.png",
             position: "Media Head",
             tags: { cat: "Music", bat: "2022", pos: "Member" },
-            names: [
-                "Anvik Ghosh",
-                "Onabheek",
-            ],
+            names: ["Anvik Ghosh", "Onabheek"],
         },
         {
             pfp_url: "https://i.imgur.com/mKEgHSp.png",
             position: "Ex Joint Secretary",
             tags: { cat: "Dance", bat: "2020", pos: "FOMO" },
-            names: [
-                "Samyu Kamtam",
-                "Real Manasvi Chervela",
-            ],
+            names: ["Samyu Kamtam", "Real Manasvi Chervela"],
         },
         {
             pfp_url: "https://i.imgur.com/hFdlFpH.png",
             position: "Ex Secretary",
             tags: { cat: "Music", bat: "2020", pos: "FOMO" },
-            names: [
-                "Ramakrishna C",
-                "Ramashankar D",
-                "Balakrishna",
-            ],
+            names: ["Ramakrishna C", "Ramashankar D", "Balakrishna"],
         },
         {
             pfp_url: "https://i.imgur.com/nmaoCyr.png",
@@ -106,7 +102,20 @@
 <main>
     <NavBar pageIndex={0} position="bottom" />
 
-    <section id="hero-section">
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <!-- svelte-ignore a11y-no-static-element-interactions -->
+    <section
+        id="hero-section"
+        style="background-image: linear-gradient(
+                to bottom,
+                transparent,
+                rgba(0, 0, 0, 0.8)
+            ),
+            url({bgImages[bgImageIndex]});"
+        on:click={() => {
+            bgImageIndex = (bgImageIndex + 1) % bgImages.length;
+        }}
+    >
         <figure>
             <center
                 ><img
@@ -180,12 +189,6 @@
     }
 
     #hero-section {
-        background-image: linear-gradient(
-                to bottom,
-                transparent,
-                rgba(0, 0, 0, 0.8)
-            ),
-            url("music/music_bg_2_crop.JPG");
         background-position: center;
         background-size: cover;
         height: 100vh;
@@ -193,6 +196,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        box-shadow: 0px 10px 20px black;
     }
 
     #members-section {
