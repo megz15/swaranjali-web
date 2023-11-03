@@ -181,7 +181,7 @@
 
     #parallax-background {
         background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.8)),
-            url("glyphs.png");
+            url("assets/glyphs.png");
         background-attachment: fixed;
         background-position: center;
     }
@@ -201,13 +201,12 @@
         box-shadow: 0px 10px 20px black;
     }
 
-    @media screen and (max-width: 768px) {
+    /* @media screen and (max-width: 400px) {
         #hero-section {
-            height: 50vh
-            /* background-size: contain;
-            background-position: top; */
+            background-size: contain;
+            background-position: top;
         }
-    }
+    } */
 
     #members-section {
         display: flex;
