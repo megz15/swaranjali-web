@@ -73,10 +73,10 @@
     .tags {
         display: flex;
         gap: 10px;
+        color: black;
     }
 
     .tags span {
-        color: black;
         padding: 8px 24px 8px 24px;
         border-radius: 8px;
     }
