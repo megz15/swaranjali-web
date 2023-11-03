@@ -1,6 +1,102 @@
 <script lang="ts">
     import MemberCard from "../components/member_card.svelte";
     import NavBar from "../components/navbar.svelte";
+
+    let memberData = [
+        {
+            pfp_url: "https://i.imgur.com/WspOiaD.png",
+            position: "Secretary",
+            tags: { cat: "Music", bat: "2021", pos: "Senate" },
+            names: [
+                "Muruga Perumal",
+                "Mureta Primal",
+                "Merugoon Tirumal",
+                "Merugu Pidugu",
+                "Merufeet Per-umal",
+                "Margarita Perumal",
+                "Mureta Primal",
+                "Murmura Perumal",
+                "Marunga Perumal",
+            ],
+        },
+        {
+            pfp_url: "https://i.imgur.com/5dKVI5o.png",
+            position: "Joint Secretary",
+            tags: { cat: "Music", bat: "2021", pos: "Senate" },
+            names: [
+                "Antara Ghosh",
+                "Send Moms",
+            ],
+        },
+        {
+            pfp_url: "https://i.imgur.com/3b4f5bZ.png",
+            position: "Treasurer",
+            tags: { cat: "Music", bat: "2022", pos: "Senate" },
+            names: [
+                "Manasvi Chervela",
+                "Dopysvi Camera",
+                "Controlzsvi",
+                "Lampsvi Candela",
+            ],
+        },
+        {
+            pfp_url: "https://i.imgur.com/Y6JH6TX.png",
+            position: "Dance Head",
+            tags: { cat: "Dance", bat: "2022", pos: "Member" },
+            names: [
+                "Khushi Kamtam",
+                "feeeeeeeeeet",
+            ],
+        },
+        {
+            pfp_url: "https://i.imgur.com/1Q6CGcA.png",
+            position: "Dance Head",
+            tags: { cat: "Dance", bat: "2022", pos: "Member" },
+            names: ["Aishwarya Reddy"],
+        },
+        {
+            pfp_url: "https://i.imgur.com/cyYCTFG.png",
+            position: "Media Head",
+            tags: { cat: "Music", bat: "2022", pos: "Member" },
+            names: [
+                "Anvik Ghosh",
+                "Onabheek",
+            ],
+        },
+        {
+            pfp_url: "https://i.imgur.com/mKEgHSp.png",
+            position: "Ex Joint Secretary",
+            tags: { cat: "Dance", bat: "2020", pos: "FOMO" },
+            names: [
+                "Samyu Kamtam",
+                "Real Manasvi Chervela",
+            ],
+        },
+        {
+            pfp_url: "https://i.imgur.com/hFdlFpH.png",
+            position: "Ex Secretary",
+            tags: { cat: "Music", bat: "2020", pos: "FOMO" },
+            names: [
+                "Ramakrishna C",
+                "Ramashankar D",
+                "Balakrishna",
+            ],
+        },
+        {
+            pfp_url: "https://i.imgur.com/nmaoCyr.png",
+            position: "Music Head + Deverloper",
+            tags: { cat: "Music", bat: "2022", pos: "Enthusiast" },
+            names: [
+                "Meghraj Goswami",
+                "Meghlite Noswami",
+                "Meghu Rajan",
+                "Enthu (n=3)x",
+                "feeeeeeeeeet",
+                "Manoj Saroj",
+                "Meghraj Gos 'W' Ami",
+            ],
+        },
+    ];
 </script>
 
 <svelte:head>
@@ -26,53 +122,23 @@
         </figure>
     </section>
 
-    <section id="parallax-background">
-        <section id="about-section">
+    <div id="parallax-background">
+        <!-- <section id="about-section">
             <h1>About</h1>
             <p>Lorem Ipsum Dolor Sit Amet</p>
-        </section>
+        </section> -->
 
         <section id="members-section">
-            <MemberCard
-                url="https://i.imgur.com/vnKRYIl.png"
-                name="Meghraj Goswami"
-                position="Music Head"
-                tags={{ cat: "Music", bat: "2022", pos: "Enthusiast" }}
-            />
-
-            <MemberCard
-                url="https://i.imgur.com/5MDyx3v.png"
-                name="Onabheek Ghosh"
-                position="Media Head"
-                tags={{ cat: "Music", bat: "2022", pos: "Member" }}
-            />
-
-            <MemberCard
-                url="https://i.imgur.com/3b4f5bZ.png"
-                name="Manasvi Chervela"
-                position="Treasurer"
-                tags={{ cat: "Music", bat: "2022", pos: "Senate" }}
-            />
-
-            <MemberCard
-                url="https://i.imgur.com/Y6JH6TX.png"
-                name="Khushi Kamtam"
-                position="Dance Head"
-                tags={{ cat: "Dance", bat: "2022", pos: "Member" }}
-            />
-
-            <MemberCard
-                url="https://i.imgur.com/WspOiaD.png"
-                name="Mureta Primal"
-                position="Secretary"
-                tags={{ cat: "Music", bat: "2021", pos: "Senate" }}
-            />
+            {#each memberData as member, i}
+                <MemberCard
+                    pfp_url={member.pfp_url}
+                    position={member.position}
+                    tags={member.tags}
+                    names={member.names}
+                />
+            {/each}
         </section>
-
-        <section id="test-section">
-            <h1>test</h1>
-        </section>
-    </section>
+    </div>
 </main>
 
 <style>
@@ -134,5 +200,6 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 60px;
+        padding-block: 40px;
     }
 </style>

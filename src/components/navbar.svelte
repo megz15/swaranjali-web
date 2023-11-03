@@ -1,24 +1,24 @@
 <script lang="ts">
 
-    import { browser } from '$app/environment';
+    // import { browser } from '$app/environment';
     
     export let pageIndex:number;
     export let position:string;
 
-    const navLinks:string[] = ['Home', 'NaadGen', 'Gallery', 'Social', 'Recordings'];
-    let isScrolled:boolean = false;
+    const navLinks:string[] = ['Home', 'NaadGen', 'Gallery', 'Social', 'Recordings']; //, About, Members
+    // let isScrolled:boolean = false;
 
-    if (browser) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                isScrolled = true;
-                position = 'top';
-            } else {
-                isScrolled = false;
-                position = 'bottom';
-            }
-        });
-    }
+    // if (browser) {
+    //     window.addEventListener('scroll', () => {
+    //         if (window.scrollY > 100) {
+    //             isScrolled = true;
+    //             position = 'top';
+    //         } else {
+    //             isScrolled = false;
+    //             position = 'bottom';
+    //         }
+    //     });
+    // }
 </script>
 
 <main>
