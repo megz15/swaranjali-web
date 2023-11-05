@@ -1,6 +1,7 @@
 <script lang="ts">
 
     import { Carousel } from 'flowbite-svelte';
+    import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
 
     import glyphImage from "$lib/assets/glyphs.png";
     import logo from "$lib/assets/logo.png";
@@ -35,8 +36,22 @@
 </svelte:head>
 
 <main>
-    <NavBar pageIndex={0} position="top" />
-    
+    <!-- <NavBar pageIndex={0} position="top" /> -->
+
+    <Navbar let:NavContainer class="m-0 p-0">
+        <NavContainer class="rounded-lg bg-[#1d2230b9] fixed z-10 mt-20 flex-initial justify-around backdrop-blur">
+        <NavHamburger />
+        <NavUl>
+            <NavLi class="text-white" href="/">Home</NavLi>
+            <NavLi class="text-white" href="/members">Members</NavLi>
+            <NavLi class="text-white" href="/naadgen">NaadGen</NavLi>
+            <NavLi class="text-white" href="/drive">Drive</NavLi>
+            <NavLi class="text-white" href="/social">Social</NavLi>
+            <NavLi class="text-white" href="/recordings">Recordings</NavLi>
+        </NavUl>
+        </NavContainer>
+    </Navbar>
+
     <img id="logo" src={logo} alt="Swaranjali" />
 
     <Carousel {images}
@@ -50,7 +65,7 @@
         <Controls />
     </Carousel>
 
-    <div id="caption">
+    <div id="caption" class="backdrop-blur-[2px]">
         {image?.alt}
     </div>
 
@@ -96,7 +111,7 @@
 
     #caption {
         position: absolute;
-        bottom: 10%;
+        bottom: 14px;
         width: 100%;
         filter: drop-shadow(0 0 3px black);
         padding: 20px;
