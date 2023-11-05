@@ -2,6 +2,10 @@
 
     import { Carousel } from 'flowbite-svelte';
     import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
+    import { page } from '$app/stores';
+    import { Sidebar, SidebarGroup, SidebarItem, SidebarWrapper } from 'flowbite-svelte';
+    $: activeUrl = $page.url.pathname;
+
 
     import glyphImage from "$lib/assets/glyphs.png";
     import logo from "$lib/assets/logo.png";
@@ -38,9 +42,21 @@
 <main>
     <!-- <NavBar pageIndex={0} position="top" /> -->
 
+    <Sidebar {activeUrl} class="fixed z-10 bottom-10 right-10 backdrop-blur">
+        <SidebarWrapper class="rounded-xl bg-[#1d2230b9]">
+        <SidebarGroup>
+            <SidebarItem class="text-white" label="Home" href="/" />
+            <SidebarItem class="text-white" label="Members" href="/members" />
+            <SidebarItem class="text-white" label="NaadGen" href="/naadgen" />
+            <SidebarItem class="text-white" label="Drive" href="/drive" />
+            <SidebarItem class="text-white" label="Social" href="/social" />
+            <SidebarItem class="text-white" label="Recordings" href="/recordings" />
+        </SidebarGroup>
+        </SidebarWrapper>
+    </Sidebar>
+
     <Navbar let:NavContainer class="m-0 p-0">
-        <NavContainer class="rounded-lg bg-[#1d2230b9] fixed z-10 mt-20 flex-initial justify-around backdrop-blur">
-        <NavHamburger />
+        <NavContainer class="w-4/5 rounded-lg bg-[#1d2230b9] fixed z-10 mt-20 flex-initial justify-around backdrop-blur">
         <NavUl>
             <NavLi class="text-white" href="/">Home</NavLi>
             <NavLi class="text-white" href="/members">Members</NavLi>
