@@ -1,24 +1,24 @@
 <script lang="ts">
 
-    import { browser } from '$app/environment';
+    // import { browser } from '$app/environment';
     
     export let pageIndex:number;
     export let position:string;
 
     const navLinks:string[] = ['Home', 'NaadGen', 'Media', 'JamSessions']; //, About, Members
-    let isScrolled:boolean = false;
+    // let isScrolled:boolean = false;
 
-    if (browser) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                isScrolled = true;
-                position = 'top';
-            } else {
-                isScrolled = false;
-                position = 'bottom';
-            }
-        });
-    }
+    // if (browser) {
+    //     window.addEventListener('scroll', () => {
+    //         if (window.scrollY > 100) {
+    //             isScrolled = true;
+    //             position = 'top';
+    //         } else {
+    //             isScrolled = false;
+    //             position = 'bottom';
+    //         }
+    //     });
+    // }
 </script>
 
 <main>

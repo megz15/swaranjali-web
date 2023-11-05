@@ -1,22 +1,33 @@
 <script lang="ts">
 
+    import { Carousel } from 'flowbite-svelte';
+
     import glyphImage from "$lib/assets/glyphs.png";
     import logo from "$lib/assets/logo.png";
+
+    import musicHeroOne from "$lib/assets/hero-bg/music_1.jpg";
+    import musicHeroTwo from "$lib/assets/hero-bg/music_2.jpg";
+    import musicHeroThree from "$lib/assets/hero-bg/music_3.jpg";
+
+    import danceHeroOne from "$lib/assets/hero-bg/dance_1.jpg";
+    import danceHeroTwo from "$lib/assets/hero-bg/dance_2.jpg";
+    import danceHeroThree from "$lib/assets/hero-bg/dance_3.jpg";
 
     import MemberCard from "../components/member_card.svelte";
     import NavBar from "../components/navbar.svelte";
     import memberData from "$lib/data/senate-members.json";
 
-    let bgImages = [
-        "src/lib/assets/hero-bg/music_1.JPG",
-        "src/lib/assets/hero-bg/dance_1.JPG",
-        "src/lib/assets/hero-bg/music_2.JPG",
-        "src/lib/assets/hero-bg/dance_3.JPG",
-        "src/lib/assets/hero-bg/music_3.JPG",
-        "src/lib/assets/hero-bg/dance_2.JPG",
+    const images = [
+        {src: musicHeroOne, alt: "Pearl 2023 Inauguration - Unnai Kaanadhu"},
+        {src: danceHeroOne, alt: "Pearl 2023 Inauguration - Unnai Kaanadhu"},
+        {src: musicHeroTwo, alt: "Pearl 2023 Inauguration - Unnai Kaanadhu"},
+        {src: danceHeroTwo, alt: "Pearl 2023 Inauguration - Unnai Kaanadhu"},
+        {src: musicHeroThree, alt: "Pearl 2023 Inauguration - Unnai Kaanadhu"},
+        {src: danceHeroThree, alt: "Pearl 2023 Inauguration - Unnai Kaanadhu"},
     ];
 
-    let bgImageIndex = 0;
+    let index = 0;
+    let image;
 </script>
 
 <svelte:head>
@@ -24,36 +35,24 @@
 </svelte:head>
 
 <main>
-    <NavBar pageIndex={0} position="bottom" />
+    <NavBar pageIndex={0} position="top" />
+    
+    <img id="logo" src={logo} alt="Swaranjali" />
 
-    <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <!-- svelte-ignore a11y-no-static-element-interactions -->
-    <section
-        id="hero-section"
-        style="background-image: linear-gradient(
-                to bottom,
-                transparent,
-                rgba(0, 0, 0, 0.8)
-            ),
-            url({bgImages[bgImageIndex]});"
-        on:click={() => {
-            bgImageIndex = (bgImageIndex + 1) % bgImages.length;
-        }}
+    <Carousel {images}
+        let:Indicators let:Controls
+        duration="6000"
+        on:change={({ detail }) => (image = detail)}
+        class="rounded-none shadow-lg shadow-black"
+        style="height: 100vh;"
     >
-        <figure>
-            <center
-                ><img
-                    id="logo"
-                    src={logo}
-                    alt="Swaranjali"
-                /></center
-            >
-            <figcaption>
-                The Indian music and dance club of<br />
-                Bits Pilani, Hyderabad Campus
-            </figcaption>
-        </figure>
-    </section>
+        <Indicators />
+        <Controls />
+    </Carousel>
+
+    <div id="caption">
+        {image?.alt}
+    </div>
 
     <div
         id="parallax-background"
@@ -61,10 +60,6 @@
         background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.8)),
         url({glyphImage});"
     >
-        <!-- <section id="about-section">
-            <h1>About</h1>
-            <p>Lorem Ipsum Dolor Sit Amet</p>
-        </section> -->
 
         <section id="members-section">
             {#each memberData as member, i}
@@ -89,46 +84,28 @@
 
     #logo {
         filter: drop-shadow(0 0 5px black) drop-shadow(0 0 2em rgb(90, 90, 90));
-        width: 70%;
-        cursor: pointer;
-    }
-
-    figcaption {
-        filter: drop-shadow(0 0 3px black);
-        padding: 20px;
-        text-align: center;
-        color: white;
-        font-size: 26px;
-        font-family: "Ruwudu", serif;
-    }
-
-    @media (max-height: 475px) or (max-width: 340px) {
-        figcaption {
-            display: none;
-        }
+        position: absolute; width: 300px;
+        left: 50%; transform: translateX(-50%) translateY(75%);
+        z-index: 1;
     }
 
     #parallax-background {
         background-attachment: fixed;
         background-position: center;
     }
-    #hero-section {
-        background-position: center;
-        background-size: cover;
-        height: 100vh;
-        background-color: black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0px 10px 20px black;
-    }
 
-    /* @media screen and (max-width: 400px) {
-        #hero-section {
-            background-size: contain;
-            background-position: top;
-        }
-    } */
+    #caption {
+        position: absolute;
+        bottom: 10%;
+        width: 100%;
+        filter: drop-shadow(0 0 3px black);
+        padding: 20px;
+        text-align: center;
+        color: white;
+        font-size: 26px;
+        font-family: "Ruwudu", serif;
+        background-color: rgb(0,0,0,0.4);
+    }
 
     #members-section {
         display: flex;
