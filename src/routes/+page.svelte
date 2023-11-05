@@ -1,106 +1,22 @@
 <script lang="ts">
+
+    import glyphImage from "$lib/assets/glyphs.png";
+    import logo from "$lib/assets/logo.png";
+
     import MemberCard from "../components/member_card.svelte";
     import NavBar from "../components/navbar.svelte";
+    import memberData from "$lib/data/senate-members.json";
 
     let bgImages = [
-        "hero-bg/music_1.JPG",
-        "hero-bg/dance_1.JPG",
-        "hero-bg/music_2.JPG",
-        "hero-bg/dance_2.JPG",
-        "hero-bg/music_3.JPG",
-        "hero-bg/dance_3.JPG",
-        "hero-bg/dance_4.JPG",
+        "src/lib/assets/hero-bg/music_1.JPG",
+        "src/lib/assets/hero-bg/dance_1.JPG",
+        "src/lib/assets/hero-bg/music_2.JPG",
+        "src/lib/assets/hero-bg/dance_3.JPG",
+        "src/lib/assets/hero-bg/music_3.JPG",
+        "src/lib/assets/hero-bg/dance_2.JPG",
     ];
-
-    let glyphImage = "assets/glyphs.png"
 
     let bgImageIndex = 0;
-
-    let memberData = [
-        {
-            pfp_url: "https://i.imgur.com/WspOiaD.png",
-            position: "Secretary",
-            tags: { cat: "Music", bat: "2021", pos: "Senate" },
-            names: [
-                "Muruga Perumal",
-                "Merugoon Tirumal",
-                "Margaya Perumal",
-                "Bhag gaya Perumal",
-                "Murmura Perumal",
-                "Marunga Perumal",
-                "Merugu Pidugu",
-                "Merufeet Per-umal",
-                "Margarita Perumal",
-                "Mureta Primal",
-            ],
-        },
-        {
-            pfp_url: "https://i.imgur.com/5dKVI5o.png",
-            position: "Joint Secretary",
-            tags: { cat: "Music", bat: "2021", pos: "Senate" },
-            names: [
-                "Antara Ghosh",
-                "Send Moms",
-                "Antara Ghosh",
-                "Send Mom",
-            ],
-        },
-        {
-            pfp_url: "https://i.imgur.com/3b4f5bZ.png",
-            position: "Treasurer",
-            tags: { cat: "Music", bat: "2022", pos: "Senate" },
-            names: [
-                "Manasvi Chervela",
-                "Dopysvi Camera",
-                "Controlzsvi",
-                "Lampsvi Candela",
-            ],
-        },
-        {
-            pfp_url: "https://i.imgur.com/Y6JH6TX.png",
-            position: "Dance Head",
-            tags: { cat: "Dance", bat: "2022", pos: "Member" },
-            names: ["Khushi Kamtam", "feeeeeeeeeet"],
-        },
-        {
-            pfp_url: "https://i.imgur.com/1Q6CGcA.png",
-            position: "Dance Head",
-            tags: { cat: "Dance", bat: "2022", pos: "Member" },
-            names: ["Aishwarya Reddy"],
-        },
-        {
-            pfp_url: "https://i.imgur.com/cyYCTFG.png",
-            position: "Media Head",
-            tags: { cat: "Music", bat: "2022", pos: "Member" },
-            names: ["Anvik Ghosh", "Onabheek"],
-        },
-        {
-            pfp_url: "https://i.imgur.com/mKEgHSp.png",
-            position: "Ex Joint Secretary",
-            tags: { cat: "Dance", bat: "2020", pos: "FOMO" },
-            names: ["Samyu Kamtam", "Real Manasvi Chervela"],
-        },
-        {
-            pfp_url: "https://i.imgur.com/hFdlFpH.png",
-            position: "Ex Secretary",
-            tags: { cat: "Music", bat: "2020", pos: "FOMO" },
-            names: ["Ramakrishna C", "Ramashankar D", "Balakrishna"],
-        },
-        {
-            pfp_url: "https://i.imgur.com/nmaoCyr.png",
-            position: "Music Head + Deverloper",
-            tags: { cat: "Music", bat: "2022", pos: "Enthusiast" },
-            names: [
-                "Meghraj Goswami",
-                "Meghlite Noswami",
-                "Enthu (n=3)x",
-                "feeeeeeeeeet",
-                "Manoj Saroj",
-                "Meghu Rajan",
-                "Meghraj W Ami",
-            ],
-        },
-    ];
 </script>
 
 <svelte:head>
@@ -128,7 +44,7 @@
             <center
                 ><img
                     id="logo"
-                    src="logo/swaranjali_logo_inverted_dotfix_removebg.png"
+                    src={logo}
                     alt="Swaranjali"
                 /></center
             >
@@ -139,7 +55,9 @@
         </figure>
     </section>
 
-    <div id="parallax-background" style="
+    <div
+        id="parallax-background"
+        style="
         background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.8)),
         url({glyphImage});"
     >
