@@ -3,9 +3,10 @@
     import { Carousel } from 'flowbite-svelte';
     import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
     import { page } from '$app/stores';
-    import { Sidebar, SidebarGroup, SidebarItem, SidebarWrapper } from 'flowbite-svelte';
+    import { fade } from 'svelte/transition';
+    
     $: activeUrl = $page.url.pathname;
-
+    const fadeAnimation = (x: Element) => fade(x, { duration: 300 });
 
     import glyphImage from "$lib/assets/glyphs.png";
     import logo from "$lib/assets/logo.png";
@@ -19,20 +20,22 @@
     import danceHeroThree from "$lib/assets/hero-bg/dance_3.jpg";
 
     import MemberCard from "../components/member_card.svelte";
-    import NavBar from "../components/navbar.svelte";
     import memberData from "$lib/data/senate-members.json";
 
     const images = [
-        {src: musicHeroOne, alt: "Pearl 2023 Inauguration - Unnai Kaanadhu"},
-        {src: danceHeroOne, alt: "Pearl 2023 Inauguration - Unnai Kaanadhu"},
-        {src: musicHeroTwo, alt: "Pearl 2023 Inauguration - Unnai Kaanadhu"},
-        {src: danceHeroTwo, alt: "Pearl 2023 Inauguration - Unnai Kaanadhu"},
-        {src: musicHeroThree, alt: "Pearl 2023 Inauguration - Unnai Kaanadhu"},
-        {src: danceHeroThree, alt: "Pearl 2023 Inauguration - Unnai Kaanadhu"},
+        {src: musicHeroOne, alt: "Pearl 2023 Inauguration - Unnai Kaanadhu", title: "Music 1"},
+        {src: danceHeroOne, alt: "Waves 2023 Inauguration - Dayal Baba", title: "Dance 1"},
+        {src: musicHeroTwo, alt: "Crux 2023 Inauguration - Shailesh", title: "Music 2"},
+        {src: danceHeroTwo, alt: "A", title: "Dance 2"},
+        {src: musicHeroThree, alt: "B", title: "Music 3"},
+        {src: danceHeroThree, alt: "C", title: "Dance 3"},
     ];
 
-    let index = 0;
-    let image;
+    let image: {
+        src: string;
+        alt: string;
+        title: string;
+    };
 </script>
 
 <svelte:head>
@@ -42,28 +45,16 @@
 <main>
     <!-- <NavBar pageIndex={0} position="top" /> -->
 
-    <Sidebar {activeUrl} class="fixed z-10 bottom-10 right-10 backdrop-blur">
-        <SidebarWrapper class="rounded-xl bg-[#1d2230b9]">
-        <SidebarGroup>
-            <SidebarItem class="text-white" label="Home" href="/" />
-            <SidebarItem class="text-white" label="Members" href="/members" />
-            <SidebarItem class="text-white" label="NaadGen" href="/naadgen" />
-            <SidebarItem class="text-white" label="Drive" href="/drive" />
-            <SidebarItem class="text-white" label="Social" href="/social" />
-            <SidebarItem class="text-white" label="Recordings" href="/recordings" />
-        </SidebarGroup>
-        </SidebarWrapper>
-    </Sidebar>
-
     <Navbar let:NavContainer class="m-0 p-0">
-        <NavContainer class="w-4/5 rounded-lg bg-[#1d2230b9] fixed z-10 mt-20 flex-initial justify-around backdrop-blur">
+        <NavContainer class="bg-[#1d2230b9] rounded-lg fixed z-10 top-2 justify-around backdrop-blur">
+        <NavHamburger />
         <NavUl>
-            <NavLi class="text-white" href="/">Home</NavLi>
-            <NavLi class="text-white" href="/members">Members</NavLi>
-            <NavLi class="text-white" href="/naadgen">NaadGen</NavLi>
-            <NavLi class="text-white" href="/drive">Drive</NavLi>
-            <NavLi class="text-white" href="/social">Social</NavLi>
-            <NavLi class="text-white" href="/recordings">Recordings</NavLi>
+            <NavLi class="text-black sm:text-white" href="/">Home</NavLi>
+            <NavLi class="text-black sm:text-white" href="/members">Members</NavLi>
+            <NavLi class="text-black sm:text-white" href="/naadgen">NaadGen</NavLi>
+            <NavLi class="text-black sm:text-white" href="/drive">Drive</NavLi>
+            <NavLi class="text-black sm:text-white" href="/social">Social</NavLi>
+            <NavLi class="text-black sm:text-white" href="/recordings">Recordings</NavLi>
         </NavUl>
         </NavContainer>
     </Navbar>
@@ -71,8 +62,9 @@
     <img id="logo" src={logo} alt="Swaranjali" />
 
     <Carousel {images}
+        transition={fadeAnimation}
         let:Indicators let:Controls
-        duration="6000"
+        duration={6000}
         on:change={({ detail }) => (image = detail)}
         class="rounded-none shadow-lg shadow-black"
         style="height: 100vh;"
