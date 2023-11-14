@@ -1,12 +1,7 @@
 <script lang="ts">
 
-    import { Carousel } from 'flowbite-svelte';
-    import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
-    import { page } from '$app/stores';
+    import { Navbar, NavLi, NavUl, NavHamburger, Carousel, Card, Avatar, Badge } from 'flowbite-svelte';
     import { fade } from 'svelte/transition';
-    
-    $: activeUrl = $page.url.pathname;
-    const fadeAnimation = (x: Element) => fade(x, { duration: 300 });
 
     import glyphImage from "$lib/assets/glyphs.png";
     import logo from "$lib/assets/logo.png";
@@ -22,19 +17,20 @@
     import MemberCard from "../components/member_card.svelte";
     import memberData from "$lib/data/senate-members.json";
 
+    const fadeAnimation = (x: Element) => fade(x, { duration: 300 });
+
     const images = [
-        {src: musicHeroOne, alt: "Pearl 2023 Inauguration - Unnai Kaanadhu", title: "Music 1"},
-        {src: danceHeroOne, alt: "Waves 2023 Inauguration - Dayal Baba", title: "Dance 1"},
-        {src: musicHeroTwo, alt: "Crux 2023 Inauguration - Shailesh", title: "Music 2"},
-        {src: danceHeroTwo, alt: "A", title: "Dance 2"},
-        {src: musicHeroThree, alt: "B", title: "Music 3"},
-        {src: danceHeroThree, alt: "C", title: "Dance 3"},
+        {src: musicHeroOne, alt: "Pearl 2023 Inauguration - Unnai Kaanadhu"},
+        {src: danceHeroOne, alt: "Waves 2023 Inauguration - Dayal Baba"},
+        {src: musicHeroTwo, alt: "Crux 2023 Inauguration - Shailesh"},
+        {src: danceHeroTwo, alt: "A"},
+        {src: musicHeroThree, alt: "B"},
+        {src: danceHeroThree, alt: "C"},
     ];
 
     let image: {
         src: string;
         alt: string;
-        title: string;
     };
 </script>
 
@@ -134,7 +130,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 60px;
+        gap: 20px;
         padding-block: 40px;
     }
 </style>
