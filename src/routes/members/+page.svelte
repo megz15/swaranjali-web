@@ -1,5 +1,5 @@
 <script lang="ts">
-    import MemberCard from "../../components/gen_member_card.svelte";
+    import MemberCard from "$lib/components/gen_member_card.svelte";
     import memberData from "$lib/data/members.json";
     import { Select } from 'flowbite-svelte';
 

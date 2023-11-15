@@ -1,6 +1,6 @@
 <script lang="ts">
 
-    import { Navbar, NavLi, NavUl, NavHamburger, Carousel, Card, Avatar, Badge } from 'flowbite-svelte';
+    import { Carousel } from 'flowbite-svelte';
     import { fade } from 'svelte/transition';
 
     import glyphImage from "$lib/assets/glyphs.png";
@@ -14,7 +14,7 @@
     import danceHeroTwo from "$lib/assets/hero-bg/dance_2.jpg";
     import danceHeroThree from "$lib/assets/hero-bg/dance_3.jpg";
 
-    import MemberCard from "../components/member_card.svelte";
+    import MemberCard from "$lib/components/por_member_card.svelte";
     import memberData from "$lib/data/senate-members.json";
 
     const fadeAnimation = (x: Element) => fade(x, { duration: 300 });
@@ -40,20 +40,6 @@
 
 <main>
     <!-- <NavBar pageIndex={0} position="top" /> -->
-
-    <Navbar let:NavContainer class="m-0 p-0">
-        <NavContainer class="bg-[#1d2230b9] rounded-lg fixed z-10 top-2 justify-around backdrop-blur">
-        <NavHamburger />
-        <NavUl>
-            <NavLi class="text-black sm:text-white" href="/">Home</NavLi>
-            <NavLi class="text-black sm:text-white" href="/members">Members</NavLi>
-            <NavLi class="text-black sm:text-white" href="/naadgen">NaadGen</NavLi>
-            <NavLi class="text-black sm:text-white" href="/drive">Drive</NavLi>
-            <NavLi class="text-black sm:text-white" href="/social">Social</NavLi>
-            <NavLi class="text-black sm:text-white" href="/recordings">Recordings</NavLi>
-        </NavUl>
-        </NavContainer>
-    </Navbar>
 
     <img id="logo" src={logo} alt="Swaranjali" />
 
