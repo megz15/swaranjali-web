@@ -3,29 +3,34 @@
     import memberData from "$lib/data/members.json";
     import { Select } from 'flowbite-svelte';
 
-    let selectedDomain = -1;
+    for (let i = memberData.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [memberData[i], memberData[j]] = [memberData[j], memberData[i]];
+    }
+
+    let selectedDomain = 'All';
     const domain = [
-        { value: -1, name: 'All'  },
-        { value: 13, name: 'Music' },
-        { value: 4, name: 'Dance' },
+        { value: 'All', name: 'All'  },
+        { value: 'Dance', name: 'Dance' },
+        { value: 'Music', name: 'Music' },
     ];
 
-    let selectedBatch = -1;
+    let selectedBatch = 'All';
     const batch = [
-        { value: -1, name: 'All'  },
-        { value: 23, name: '2023' },
-        { value: 22, name: '2022' },
-        { value: 21, name: '2021' },
-        { value: 20, name: '2020' },
+        { value: 'All', name: 'All'  },
+        { value: '2020', name: '2020' },
+        { value: '2021', name: '2021' },
+        { value: '2022', name: '2022' },
+        { value: '2023', name: '2023' },
     ];
 
-    let selectedPosition = -1;
+    let selectedPosition = 'All';
     const position = [
-        { value: -1, name: 'All'  },
-        { value: 5, name: 'Enthusiast' },
-        { value: 13, name: 'Member' },
-        { value: 16, name: 'POR' },
-        { value: 6, name: 'FOMO' },
+        { value: 'All', name: 'All'  },
+        { value: 'Enthusiast', name: 'Enthusiast' },
+        { value: 'Music', name: 'Member' },
+        { value: 'FOMO', name: 'FOMO' },
+        { value: 'POR', name: 'POR' },
     ];
 
 </script>
@@ -40,15 +45,21 @@
 
     <div class="flex flex-wrap justify-center gap-5">
         {#each memberData as member, _}
-            <MemberCard
-                name = {member.name}
-                id = {member.id}
-                pfp_url={member.pfp_url}
-                skill = {member.skill}
-                contact = {member.contact}
-                tags = {member.tags}
-                text = {member.text}
-            />
+            {#if
+                (selectedDomain === 'All' || member.tags.cat === selectedDomain) &&
+                (selectedBatch === 'All' || member.tags.bat === selectedBatch) &&
+                (selectedPosition === 'All' || member.tags.pos === selectedPosition)
+            }
+                <MemberCard
+                    name = {member.name}
+                    id = {member.id}
+                    pfp_url={member.pfp_url}
+                    skill = {member.skill}
+                    contact = {member.contact}
+                    tags = {member.tags}
+                    text = {member.text}
+                />
+            {/if}
         {/each}
     </div>
 </main>
