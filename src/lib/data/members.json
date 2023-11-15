@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Meghraj Goswami",
+        "id": "2022A2B41869H",
+        "pfp_url": "https://i.imgur.com/nmaoCyr.png",
+        "skill": "Sarod",
+        "contact": {
+            "email": "meghraj.g16@gmail.com",
+            "phone": "919876543210",
+            "github": "megz15",
+            "insta": "megh.835"
+        },
+        "tags": { "cat": "Music", "bat": "2022", "pos": "Enthusiast" },
+        "text": "mfw lipsum"
+    },
+    {
+        "name": "Anvik Goswami",
+        "id": "2022B2B41869H",
+        "pfp_url": "https://i.imgur.com/nmaoCyr.png",
+        "skill": "Table",
+        "contact": {
+            "email": "anvik.g16@gmail.com",
+            "phone": "919876543211",
+            "github": "a15",
+            "insta": "a.835"
+        },
+        "tags": { "cat": "Dance", "bat": "2023", "pos": "Member" },
+        "text": "mfw lipsum"
+    },
+    {
+        "name": "Kamtam Goswami",
+        "id": "2022C2B41869H",
+        "pfp_url": "https://i.imgur.com/nmaoCyr.png",
+        "skill": "Kuchipudi",
+        "contact": {
+            "email": "i.g16@gmail.com",
+            "phone": "910876543211",
+            "github": "i15",
+            "insta": "i.835"
+        },
+        "tags": { "cat": "Music", "bat": "2020", "pos": "Member" },
+        "text": "mfw lipsum"
+    }
+]
