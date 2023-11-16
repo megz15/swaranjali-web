@@ -1,6 +1,6 @@
 <script lang="ts">
     import "../app.postcss";
-    import { Navbar, NavLi, NavUl, BottomNav, BottomNavItem } from "flowbite-svelte";
+    import { Navbar, NavLi, NavUl, BottomNav, BottomNavItem, Footer } from "flowbite-svelte";
 </script>
 
 <Navbar let:NavContainer class="m-0 p-0">
@@ -18,7 +18,7 @@
 </Navbar>
 
 <div class="md:hidden">
-    <BottomNav style="background-color: #1d2230b9; backdrop-filter: blur(8px); border-width: 0; border-radius: 6px;" position="fixed" classInner="grid-cols-6 text-white shadow shadow-black" navType="application">
+    <BottomNav style="width: max-content; background-color: #1d2230b9; backdrop-filter: blur(8px); border-width: 0; border-radius: 6px;" position="fixed" classInner="grid-cols-3 text-white shadow shadow-black" navType="application">
         <BottomNavItem btnName="Home">
             H
         </BottomNavItem>
@@ -28,7 +28,7 @@
         <BottomNavItem btnName="NaadGen">
             N
         </BottomNavItem>
-        <BottomNavItem btnName="Drive">
+        <!-- <BottomNavItem btnName="Drive">
             D
         </BottomNavItem>
         <BottomNavItem btnName="Social">
@@ -36,8 +36,12 @@
         </BottomNavItem>
         <BottomNavItem btnName="Jam">
             R
-        </BottomNavItem>
+        </BottomNavItem> -->
     </BottomNav>
 </div>
 
 <slot />
+
+<Footer class="relative flex justify-center p-5 text-center bg-[#1d2230] text-white">
+    Made with 👣 and 💙 by Meghraj Goswami
+</Footer>
