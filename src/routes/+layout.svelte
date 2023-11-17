@@ -50,8 +50,8 @@
 
     <slot />
 
-    <Footer class="relative flex justify-center p-5 text-center bg-[#1d2230b9] text-white backdrop-blur">
-        Made with 👣 and 💙 by Meghraj Goswami
+    <Footer class="h-16 flex items-center justify-center text-center bg-[#1d2230b9] text-white backdrop-blur">
+        Made with 👣 and 💙 by <a href="https://github.com/megz15" class="pl-3 text-yellow-300 font-semibold transition duration-200 hover:text-orange-400">Meghraj Goswami</a>
     </Footer>
 
 </div>
