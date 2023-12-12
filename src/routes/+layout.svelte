@@ -2,6 +2,8 @@
     import "../app.postcss";
     import { Navbar, NavLi, NavUl, BottomNav, BottomNavItem, Footer } from "flowbite-svelte";
     import glyphImage from "$lib/assets/glyphs.png";
+
+    import RadioPlayer from "$lib/components/radio_player.svelte";
 </script>
 
 <div
@@ -47,6 +49,8 @@
             </BottomNavItem> -->
         </BottomNav>
     </div>
+
+    <RadioPlayer />
 
     <slot />
 
