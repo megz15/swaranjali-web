@@ -16,37 +16,37 @@
     <Navbar let:NavContainer class="m-0 p-0">
         <NavContainer class="bg-[#1d2230b9] right-1/2 translate-x-1/2 rounded-lg fixed z-50 top-5 justify-around backdrop-blur w-min shadow shadow-black">
         <!-- <NavHamburger /> -->
-        <NavUl>
-            <NavLi class="text-white" href="/">Home</NavLi>
-            <NavLi class="text-white" href="/members">Members</NavLi>
-            <NavLi class="text-white" href="/naadgen">NaadGen</NavLi>
-            <NavLi class="text-white" href="/drive">Drive</NavLi>
-            <NavLi class="text-white" href="/social">Social</NavLi>
-            <NavLi class="text-white" href="/recordings">Recordings</NavLi>
+        <NavUl nonActiveClass="text-white">
+            <NavLi href="/">Home</NavLi>
+            <NavLi href="/members">Members</NavLi>
+            <NavLi href="/naadgen">NaadGen</NavLi>
+            <NavLi href="/drive">Drive</NavLi>
+            <NavLi href="/social">Social</NavLi>
+            <NavLi href="/recordings">Recordings</NavLi>
         </NavUl>
         </NavContainer>
     </Navbar>
 
     <div class="md:hidden">
-        <BottomNav style="width: max-content; background-color: #1d2230b9; backdrop-filter: blur(8px); border-width: 0; border-radius: 6px;" position="fixed" classInner="grid-cols-3 text-white shadow shadow-black" navType="application">
-            <BottomNavItem btnName="Home">
-                H
+        <BottomNav classOuter="w-max bg-[#1d2230b9] backdrop-blur border-0 rounded-lg shadow shadow-black h-28 text-xl" position="fixed" classInner="grid-cols-3 text-white" navType="application">
+            <BottomNavItem btnName="Home" href="/">
+                🏠️
             </BottomNavItem>
-            <BottomNavItem btnName="Members">
-                M
+            <BottomNavItem btnName="Members" href="/members">
+                👥
             </BottomNavItem>
-            <BottomNavItem btnName="NaadGen">
-                N
+            <BottomNavItem btnName="NaadGen" href="/naadgen">
+                🎵️
             </BottomNavItem>
-            <!-- <BottomNavItem btnName="Drive">
-                D
+            <BottomNavItem btnName="Drive" href="/drive">
+                📁️
             </BottomNavItem>
-            <BottomNavItem btnName="Social">
-                S
+            <BottomNavItem btnName="Social" href="/social">
+                📱️
             </BottomNavItem>
-            <BottomNavItem btnName="Jam">
-                R
-            </BottomNavItem> -->
+            <BottomNavItem btnName="Recordings" href="/recordings">
+                🎻
+            </BottomNavItem>
         </BottomNav>
     </div>
 

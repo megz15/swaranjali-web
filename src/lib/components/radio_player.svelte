@@ -26,13 +26,13 @@
     function updateMeta() {
         currentTime = new Date(radio.currentTime * 1000).toISOString().substring(14, 19);
         duration = isFinite(radio.duration) ? new Date(radio.duration * 1000).toISOString().substring(14, 19) : "-1:-1";
-        // title = radio.currentSrc;
+        // title = JSON.stringify(radio.audioTracks[0]);
     }
 </script>
 
 <main>
     <Card
-        class="fixed bottom-0 right-0 z-10 m-2 bg-[#1d2230b9] rounded-lg backdrop-blur shadow shadow-black"
+        class="fixed right-0 z-10 m-2 bg-[#1d2230b9] rounded-lg backdrop-blur shadow shadow-black md:bottom-0"
     >
         <audio
             bind:this={radio}
