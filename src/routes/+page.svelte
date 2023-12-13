@@ -42,7 +42,7 @@
         transition={fadeAnimation}
         let:Indicators
         let:Controls
-        duration={0}
+        duration={5000}
         class="rounded-none shadow-lg shadow-black"
         style="height: 100vh;"
     >
