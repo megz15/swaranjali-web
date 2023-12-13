@@ -35,7 +35,9 @@
 <main>
     <!-- <NavBar pageIndex={0} position="top" /> -->
 
-    <img id="logo" src={logo} alt="Swaranjali" />
+    <div class="absolute w-full h-full z-10">
+        <img id="logo" src={logo} alt="Swaranjali" />
+    </div>
 
     <Carousel
         {images}
