@@ -1,6 +1,6 @@
 <script lang="ts">
     import "../app.postcss";
-    import { Navbar, NavLi, NavUl, BottomNav, BottomNavItem, Footer } from "flowbite-svelte";
+    import { Navbar, NavLi, NavUl, BottomNav, BottomNavItem } from "flowbite-svelte";
     import glyphImage from "$lib/assets/glyphs.png";
 
     import RadioPlayer from "$lib/components/radio_player.svelte";
@@ -54,8 +54,8 @@
 
     <slot />
 
-    <Footer class="h-16 flex items-center justify-center text-center bg-[#1d2230b9] text-white backdrop-blur">
+    <div class="z-50 w-full relative h-16 flex items-center justify-center text-center bg-[#1d2230b9] text-white backdrop-blur">
         Made with 👣 and 💙 by <a href="https://github.com/megz15" class="pl-3 text-yellow-300 font-semibold transition duration-200 hover:text-orange-400">Meghraj Goswami</a>
-    </Footer>
+    </div>
 
 </div>

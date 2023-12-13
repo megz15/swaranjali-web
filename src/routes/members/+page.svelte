@@ -37,7 +37,7 @@
 
 <main class="pt-16 pb-8">
 
-    <div class="flex justify-center gap-10 py-6">
+    <div class="flex flex-col gap-1 self-center w-32">
         <Select items={domain} bind:value={selectedDomain} placeholder="Choose Domain" />
         <Select items={batch} bind:value={selectedBatch} placeholder="Choose Batch" />
         <Select items={position} bind:value={selectedPosition} placeholder="Choose Position" />
