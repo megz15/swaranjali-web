@@ -1,11 +1,16 @@
 <script lang="ts">
+    import { page } from "$app/stores";
+
 
     // import { browser } from '$app/environment';
     
-    export let pageIndex:number;
+    $: currentPage = $page.route.id ?? "/";
+    $: pageIndex = currentPage == "/"
+            ? "Home"
+            : currentPage[1].toUpperCase() + currentPage.slice(2);
     export let position:string;
 
-    const navLinks:string[] = ['Home', 'NaadGen', 'Media', 'JamSessions']; //, About, Members
+    const navLinks:string[] = ['Home', 'Members', 'Naadgen', 'Drive', 'Social', "Recordings"];
     // let isScrolled:boolean = false;
 
     // if (browser) {
@@ -21,10 +26,10 @@
     // }
 </script>
 
-<main>
+<main class="hidden md:block">
     <div class="nav-links {position} dark">
-        {#each navLinks as navLink, index}
-            <a href={`/${navLink.toLowerCase()}`} class:active={pageIndex == index}>{navLink}</a>
+        {#each navLinks as navLink}
+            <a href={`/${navLink == "Home" ? '' : navLink.toLowerCase()}`} class:active={pageIndex == navLink}>{navLink}</a>
         {/each}
     </div>
 </main>
@@ -32,7 +37,7 @@
 <style>
     .nav-links {
         position: fixed;
-        width: 80%;
+        width: 60%;
         left: 50%; transform: translateX(-50%);
         backdrop-filter: blur(6px);
         display: flex;
@@ -50,10 +55,10 @@
     .dark { background: #1d2230b9 }
     .light { background: rgba(255, 255, 255, 0.5); }
 
-    .active { font-weight: bold; color: white; }
+    .active { font-weight: bolder; color: white; text-decoration: underline; }
 
     a {
-        color: rgba(255, 255, 255, 0.75);
+        color: rgb(190, 190, 190);
         text-decoration: none;
         position: relative;
     }

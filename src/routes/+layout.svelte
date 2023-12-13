@@ -1,9 +1,13 @@
 <script lang="ts">
     import "../app.postcss";
-    import { Navbar, NavLi, NavUl, BottomNav, BottomNavItem } from "flowbite-svelte";
+    import { BottomNav, BottomNavItem } from "flowbite-svelte";
     import glyphImage from "$lib/assets/glyphs.png";
 
     import RadioPlayer from "$lib/components/radio_player.svelte";
+    import NavBar from "$lib/components/navbar.svelte";
+
+    import { page } from "$app/stores";
+
 </script>
 
 <div
@@ -13,9 +17,10 @@
     url({glyphImage});"
 >
 
-    <Navbar let:NavContainer class="m-0 p-0">
+    <NavBar position="top" />
+
+    <!-- <Navbar let:NavContainer class="m-0 p-0">
         <NavContainer class="bg-[#1d2230b9] right-1/2 translate-x-1/2 rounded-lg fixed z-50 top-5 justify-around backdrop-blur w-min shadow shadow-black">
-        <!-- <NavHamburger /> -->
         <NavUl nonActiveClass="text-white">
             <NavLi href="/">Home</NavLi>
             <NavLi href="/members">Members</NavLi>
@@ -25,7 +30,7 @@
             <NavLi href="/recordings">Recordings</NavLi>
         </NavUl>
         </NavContainer>
-    </Navbar>
+    </Navbar> -->
 
     <div class="md:hidden">
         <BottomNav classOuter="w-max bg-[#1d2230b9] backdrop-blur border-0 rounded-lg shadow shadow-black h-28 text-xl" position="fixed" classInner="grid-cols-3 text-white" navType="application">
