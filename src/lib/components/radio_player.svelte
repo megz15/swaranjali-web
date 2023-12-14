@@ -5,10 +5,12 @@
     let isPlaying = false;
 
     let radioElement: HTMLAudioElement;
+    let cardDivElement: HTMLDivElement;
     let titleElement: HTMLDivElement;
     let durationElement: HTMLDivElement;
     let backControl: HTMLSpanElement;
     let frwdControl: HTMLSpanElement;
+    let toggleControl: HTMLSpanElement;
 
     let title: string = "Sangeet Samvaad";
     let currentTime: string = "00:00";
@@ -20,6 +22,8 @@
         durationElement.toggleAttribute("hidden");
         backControl.toggleAttribute("hidden");
         frwdControl.toggleAttribute("hidden");
+        cardDivElement.classList.toggle("h-28");
+        toggleControl.textContent = toggleControl.textContent == "➖" ? "➕" : "➖";
     }
 
     function playPause() {
@@ -44,27 +48,28 @@
 </script>
 
 <main>
+    <audio
+        bind:this={radioElement}
+        on:timeupdate={updateMeta}
+        src={radioUrl}
+        preload="metadata"
+    ></audio>
     <Card
         class="fixed right-0 z-50 m-2 bg-[#1d2230b9] rounded-lg backdrop-blur shadow shadow-black md:bottom-0"
     >
-        <audio
-            bind:this={radioElement}
-            on:timeupdate={updateMeta}
-            src={radioUrl}
-            preload="metadata"
-        ></audio>
-        <!-- <div class="text-white font-semibold">Sangeet Samvaad Radio</div> -->
-        <div bind:this={titleElement} class="text-white font-semibold">Title: {title}</div>
-        <div bind:this={durationElement} class="text-gray-300 font-semibold mb-4">
-            Duration: {currentTime}/{duration}
-        </div>
-        <!-- svelte-ignore a11y-click-events-have-key-events -->
-        <!-- svelte-ignore a11y-no-static-element-interactions -->
-        <div class="text-3xl text-gray-300 self-center">
-            <span bind:this={backControl} on:click={backward}>⏮️</span>
-            <span on:click={playPause}>{isPlaying ? "⏸️" : "▶️"}</span>
-            <span bind:this={frwdControl} on:click={forward}>⏩️</span>
-            <span on:click={togglePlayer}>➖</span>
+        <div bind:this={cardDivElement} class="h-28 flex flex-col justify-center items-center">
+            <div bind:this={titleElement} class="text-white font-semibold">Title: {title}</div>
+            <div bind:this={durationElement} class="text-gray-300 font-semibold mb-4">
+                Duration: {currentTime}/{duration}
+            </div>
+            <!-- svelte-ignore a11y-click-events-have-key-events -->
+            <!-- svelte-ignore a11y-no-static-element-interactions -->
+            <div class="text-3xl text-gray-300 self-center">
+                <span bind:this={backControl} on:click={backward}>⏮️</span>
+                <span on:click={playPause}>{isPlaying ? "⏸️" : "▶️"}</span>
+                <span bind:this={frwdControl} on:click={forward}>⏩️</span>
+                <span bind:this={toggleControl} on:click={togglePlayer}>➖</span>
+            </div>
         </div>
     </Card>
 </main>

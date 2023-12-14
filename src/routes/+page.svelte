@@ -44,7 +44,7 @@
         transition={fadeAnimation}
         let:Indicators
         let:Controls
-        duration={5000}
+        duration={3000}
         class="rounded-none shadow-lg shadow-black"
         style="height: 100vh;"
     >
@@ -62,8 +62,7 @@
             <img class="mx-auto w-28" src={quote_image} alt="quote_image" />
             <Blockquote
                 alignment="center"
-                size="3xl"
-                baseClass="text-black font-bold"
+                size="2xl"
                 >"All art is good art.<br />All music is good music.<br />Don't
                 be mean to people."</Blockquote
             >
@@ -74,13 +73,10 @@
                     size="sm"
                 />
                 <div
-                    class="flex items-center text-gray-900 divide-x-2 divide-gray-500"
+                    class="flex items-center divide-x-2 divide-gray-500"
                 >
-                    <cite class="pr-3 font-medium text-gray">Ramakrishna C</cite
-                    >
-                    <cite class="pl-3 text-sm font-light text-black"
-                        >Ex-Secretary (2022-23)</cite
-                    >
+                    <cite class="pr-3 font-medium text-sm md:text-base">Ramakrishna C</cite>
+                    <cite class="pl-3 font-light  text-xs md:text-sm">Ex-Secretary (2022-23)</cite>
                 </div>
             </figcaption>
         </figure>
