@@ -3,11 +3,11 @@
     import memberData from "$lib/data/members.json";
     import { Select, Card } from 'flowbite-svelte';
 
-    let testMultiplyMemberData = memberData.flatMap((item) => Array(5).fill(item));
+    // let testMultiplyMemberData = memberData.flatMap((item) => Array(5).fill(item));
 
-    for (let i = testMultiplyMemberData.length - 1; i > 0; i--) {
+    for (let i = memberData.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [testMultiplyMemberData[i], testMultiplyMemberData[j]] = [testMultiplyMemberData[j], testMultiplyMemberData[i]];
+        [memberData[i], memberData[j]] = [memberData[j], memberData[i]];
     }
 
     let selectedDomain = 'Domain';
@@ -30,8 +30,8 @@
     const position = [
         { value: 'Position', name: 'Position'  },
         { value: 'Enthusiast', name: 'Enthusiast' },
-        { value: 'Music', name: 'Member' },
-        { value: 'FOMO', name: 'FOMO' },
+        { value: 'Member', name: 'Member' },
+        { value: 'Former', name: 'Former' },
         { value: 'POR', name: 'POR' },
     ];
 </script>
@@ -49,14 +49,14 @@
     </div>
 </Card>
 
-<main class="pt-40 md:pt-20 pb-8">
+<main class="min-h-[calc(100vh-4rem)] pt-40 md:pt-20 pb-8">
 
     <div class="flex flex-wrap justify-center gap-5">
-        {#each testMultiplyMemberData as member, _}
+        {#each memberData as member, _}
             {#if
                 (selectedDomain == 'Domain' || member.tags.cat == selectedDomain) &&
                 (selectedBatch == 'Batch' || member.tags.bat == selectedBatch) &&
-                (selectedPosition == 'Position' || member.tags.pos == selectedPosition)
+                (selectedPosition == 'Position' || selectedPosition == "Member" && member.tags.pos == "POR" || member.tags.pos == selectedPosition)
             }
                 <MemberCard
                     name = {member.name}
