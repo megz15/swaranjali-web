@@ -5,13 +5,13 @@
     import logo from "$lib/assets/logo.png";
     import quote_image from "$lib/assets/quote.png";
 
-    import musicHeroOne from "$lib/assets/hero-bg/music_1_1.jpg";
-    import musicHeroTwo from "$lib/assets/hero-bg/music_2.jpg";
-    import musicHeroThree from "$lib/assets/hero-bg/music_3.jpg";
+    import musicHeroOne from "$lib/assets/opt-hero-bg/music_1_1.jpg";
+    import musicHeroTwo from "$lib/assets/opt-hero-bg/music_2.jpg";
+    import musicHeroThree from "$lib/assets/opt-hero-bg/music_3.jpg";
 
-    import danceHeroOne from "$lib/assets/hero-bg/dance_1.jpg";
-    import danceHeroTwo from "$lib/assets/hero-bg/dance_2.jpg";
-    import danceHeroThree from "$lib/assets/hero-bg/dance_3.jpg";
+    import danceHeroOne from "$lib/assets/opt-hero-bg/dance_1.jpg";
+    import danceHeroTwo from "$lib/assets/opt-hero-bg/dance_2.jpg";
+    import danceHeroThree from "$lib/assets/opt-hero-bg/dance_3.jpg";
 
     import MemberCard from "$lib/components/por_member_card.svelte";
     import memberData from "$lib/data/senate-members.json";

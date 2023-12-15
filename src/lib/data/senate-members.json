@@ -17,7 +17,8 @@
             "Mureta Primal",
             "Myopia Perumal",
             "Maître de Perumal",
-            "Mamata Perumal"
+            "Mamata Perumal",
+            "undefined"
         ]
     },
     {
@@ -27,7 +28,8 @@
         "names": [
             "Antara Ghosh",
             "Send Mom",
-            "Big Ghosht"
+            "Big Ghosht",
+            "undefined"
         ]
     },
     {
@@ -46,7 +48,8 @@
             "Manasfeet",
             "Man-asvi",
             "Manas W i",
-            "Monoshbi Cherbela"
+            "Monoshbi Cherbela",
+            "undefined"
         ]
     },
     {
@@ -59,7 +62,8 @@
             "Khoshoo Komtom",
             "Dukhho",
             "Who-she?",
-            "khusee"
+            "khusee",
+            "undefined"
         ]
     },
     {
@@ -72,14 +76,15 @@
         ]
     },
     {
-        "pfp_url": "https://i.imgur.com/cyYCTFG.png",
+        "pfp_url": "https://i.imgur.com/m3wI8ZH.png",
         "position": "Media Head",
         "tags": { "cat": "Music", "bat": "2022", "pos": "Member" },
         "names": [
             "Anvik Ghosh",
             "Onabheek",
             "Lil Ghosht",
-            "Meanvick"
+            "Meanvick",
+            "undefined"
         ]
     },
     {
@@ -89,7 +94,8 @@
         "names": [
             "Samyu Kamtam",
             "Riyal Manasvi",
-            "Sam-who?"
+            "Sam-who?",
+            "undefined"
         ]
     },
     {
@@ -100,7 +106,8 @@
             "Ramakrishna C",
             "Ramashankar D",
             "Rum-a-coke-na",
-            "Lactose"
+            "Lactose Tolerator",
+            "undefined"
         ]
     },
     {
@@ -116,7 +123,9 @@
             "Meghu Rajan",
             "Meghraj W Ami",
             "Goaswami",
-            "Bhagraj Gayaswami"
+            "Bhagraj Gayaswami",
+            "Kidraj Growswami",
+            "undefined"
         ]
     }
 ]
