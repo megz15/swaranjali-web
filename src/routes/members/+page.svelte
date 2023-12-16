@@ -51,12 +51,12 @@
 
 <main class="min-h-[calc(100vh-4rem)] pt-40 md:pt-20 pb-8">
 
-    <div class="flex flex-wrap justify-center gap-5">
+    <div class="flex flex-wrap justify-center gap-5 items-stretch">
         {#each memberData as member, _}
             {#if
                 (selectedDomain == 'Domain' || member.tags.cat == selectedDomain) &&
                 (selectedBatch == 'Batch' || member.tags.bat == selectedBatch) &&
-                (selectedPosition == 'Position' || selectedPosition == "Member" && member.tags.pos == "POR" || member.tags.pos == selectedPosition)
+                (selectedPosition == 'Position' || (selectedPosition == 'Member' || selectedPosition == 'POR') && member.tags.pos.startsWith('POR') || member.tags.pos == selectedPosition)
             }
                 <MemberCard
                     name = {member.name}

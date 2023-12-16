@@ -6,11 +6,109 @@
         "skill": "Sarod",
         "contact": {
             "email": "meghraj.g16@gmail.com",
-            "phone": "919876543210",
+            "phone": "8383846288",
             "github": "megz15",
             "insta": "megh.835"
         },
-        "tags": { "cat": "Music", "bat": "2022", "pos": "POR" },
-        "text": "mfw lorem ipsum"
+        "tags": { "cat": "Music", "bat": "2022", "pos": "POR | Music Head" },
+        "text": ""
+    },
+    {
+        "name": "Bhavya D",
+        "id": "2020B3A30577H",
+        "pfp_url": "https://i.imgur.com/qIVbthZ.png",
+        "skill": "Kuchipudi",
+        "contact": {
+            "email": "bhavya.dec2002@gmail.com",
+            "phone": "8688761011",
+            "github": "",
+            "insta": "b.l.a.n.k_canvas._"
+        },
+        "tags": { "cat": "Dance", "bat": "2020", "pos": "Member" },
+        "text": ""
+    },
+    {
+        "name": "Saanvi Vulchi",
+        "id": "2023A7PS2005H",
+        "pfp_url": "https://i.imgur.com/rHo83si.png",
+        "skill": "Kuchipudi",
+        "contact": {
+            "email": "vulchisaanvi@gmail.com",
+            "phone": "9398348128",
+            "github": "",
+            "insta": ""
+        },
+        "tags": { "cat": "Dance", "bat": "2023", "pos": "Member" },
+        "text": ""
+    },
+    {
+        "name": "Aditya Prakash Jois",
+        "id": "2023A7PS0126H",
+        "pfp_url": "https://i.imgur.com/0Ak7isp.png",
+        "skill": "Flute",
+        "contact": {
+            "email": "f20230126@hyderabad.bits-pilani.ac.in",
+            "phone": "9632017625",
+            "github": "",
+            "insta": "aditya_prakash010"
+        },
+        "tags": { "cat": "Music", "bat": "2023", "pos": "Enthusiast" },
+        "text": ""
+    },
+    {
+        "name": "Shailesh Chandra Rao",
+        "id": "2021A7PS2064H",
+        "pfp_url": "https://i.imgur.com/mYieG6G.jpg",
+        "skill": "Vocal, Keyboard",
+        "contact": {
+            "email": "shailx383@gmail.com",
+            "phone": "9632682222",
+            "github": "shailx383",
+            "insta": "_shail.esh"
+        },
+        "tags": { "cat": "Music", "bat": "2021", "pos": "Member" },
+        "text": ""
+    },
+    {
+        "name": "Sudeeksha Lingireddy",
+        "id": "2022AAPS0362H",
+        "pfp_url": "https://i.imgur.com/0Ak7isp.png",
+        "skill": "Vocal",
+        "contact": {
+            "email": "sudeeksha.lingireddy@gmail.com",
+            "phone": "",
+            "github": "",
+            "insta": "sudeeksha_lingireddy"
+        },
+        "tags": { "cat": "Music", "bat": "2022", "pos": "Member" },
+        "text": ""
+    },
+    {
+        "name": "Sukriti Chakraverti",
+        "id": "2020B4A32327H",
+        "pfp_url": "https://i.imgur.com/0Ak7isp.png",
+        "skill": "Odissi",
+        "contact": {
+            "email": "",
+            "phone": "9111219888",
+            "github": "",
+            "insta": ""
+        },
+        "tags": { "cat": "Dance", "bat": "2020", "pos": "Member" },
+        "text": ""
+    },
+    {
+        "name": "Ashmit Kothari",
+        "id": "2023B4PS0635H",
+        "pfp_url": "https://i.imgur.com/wYvXoeb.png",
+        "skill": "Keyboard",
+        "contact": {
+            "email": "f20230635@hyderabad.bits-pilani.ac.in",
+            "phone": "9301500840",
+            "github": "",
+            "insta": ""
+        },
+        "tags": { "cat": "Music", "bat": "2023", "pos": "Enthusiast" },
+        "text": ""
     }
 ]
