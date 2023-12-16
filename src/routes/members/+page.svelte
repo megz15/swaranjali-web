@@ -31,7 +31,7 @@
         { value: 'Position', name: 'Position'  },
         { value: 'Enthusiast', name: 'Enthusiast' },
         { value: 'Member', name: 'Member' },
-        { value: 'Former', name: 'Former' },
+        // { value: 'Former', name: 'Former' },
         { value: 'POR', name: 'POR' },
     ];
 </script>
