@@ -56,7 +56,11 @@
             {#if
                 (selectedDomain == 'Domain' || member.tags.cat == selectedDomain) &&
                 (selectedBatch == 'Batch' || member.tags.bat == selectedBatch) &&
-                (selectedPosition == 'Position' || (selectedPosition == 'Member' || selectedPosition == 'POR') && member.tags.pos.startsWith('POR') || member.tags.pos == selectedPosition)
+                (
+                    selectedPosition == 'Position' || member.tags.pos == selectedPosition
+                    || (selectedPosition == 'Member' || selectedPosition == 'POR')
+                    && (member.tags.pos.endsWith('Head') || member.tags.pos.endsWith('Secretary') || member.tags.pos == 'Treasurer')
+                )
             }
                 <MemberCard
                     name = {member.name}

@@ -10,7 +10,7 @@
             "github": "megz15",
             "insta": "megh.835"
         },
-        "tags": { "cat": "Music", "bat": "2022", "pos": "POR | Music Head" },
+        "tags": { "cat": "Music", "bat": "2022", "pos": "Music Head" },
         "text": ""
     },
     {
@@ -24,21 +24,21 @@
             "github": "",
             "insta": ""
         },
-        "tags": { "cat": "Music", "bat": "2021", "pos": "POR | Secretary" },
+        "tags": { "cat": "Music", "bat": "2021", "pos": "Secretary" },
         "text": ""
     },
     {
         "name": "Antara Ghosh",
         "id": "",
         "pfp_url": "https://i.imgur.com/5dKVI5o.png",
-        "skill": "kathak",
+        "skill": "Kathak",
         "contact": {
             "email": "",
             "phone": "",
             "github": "",
             "insta": ""
         },
-        "tags": { "cat": "Dance", "bat": "2021", "pos": "POR | Secretary" },
+        "tags": { "cat": "Dance", "bat": "2021", "pos": "Joint Secretary" },
         "text": ""
     },
     {
@@ -52,7 +52,7 @@
             "github": "",
             "insta": ""
         },
-        "tags": { "cat": "Music", "bat": "2022", "pos": "POR | Treasurer" },
+        "tags": { "cat": "Music", "bat": "2022", "pos": "Treasurer" },
         "text": ""
     },
     {
@@ -66,7 +66,7 @@
             "github": "",
             "insta": ""
         },
-        "tags": { "cat": "Dance", "bat": "2022", "pos": "POR | Dance Head" },
+        "tags": { "cat": "Dance", "bat": "2022", "pos": "Dance Head" },
         "text": ""
     },
     {
@@ -80,7 +80,7 @@
             "github": "",
             "insta": ""
         },
-        "tags": { "cat": "Dance", "bat": "2022", "pos": "POR | Dance Head" },
+        "tags": { "cat": "Dance", "bat": "2022", "pos": "Dance Head" },
         "text": ""
     },
     {
@@ -94,7 +94,7 @@
             "github": "",
             "insta": ""
         },
-        "tags": { "cat": "Music", "bat": "2022", "pos": "POR | Media Head" },
+        "tags": { "cat": "Music", "bat": "2022", "pos": "Media Head" },
         "text": ""
     },
     {
@@ -115,7 +115,7 @@
         "name": "Ramakrishna C",
         "id": "",
         "pfp_url": "https://i.imgur.com/hFdlFpH.png",
-        "skill": "Vocal, Violin",
+        "skill": "Vocal,Violin",
         "contact": {
             "email": "",
             "phone": "",
@@ -171,7 +171,7 @@
         "name": "Shailesh Chandra Rao",
         "id": "2021A7PS2064H",
         "pfp_url": "https://i.imgur.com/mYieG6G.jpg",
-        "skill": "Vocal, Keyboard",
+        "skill": "Vocal,Keyboard",
         "contact": {
             "email": "shailx383@gmail.com",
             "phone": "9632682222",
