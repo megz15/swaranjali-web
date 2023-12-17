@@ -201,7 +201,7 @@
         "pfp_url": "https://i.imgur.com/0Ak7isp.png",
         "skill": "Odissi",
         "contact": {
-            "email": "",
+            "email": "f20202327@hyderabad.bits-pilani.ac.in",
             "phone": "9111219888",
             "github": "",
             "insta": ""
@@ -221,6 +221,48 @@
             "insta": ""
         },
         "tags": { "cat": "Music", "bat": "2023", "pos": "Enthusiast" },
+        "text": ""
+    },
+    {
+        "name": "Karthikeya Raghu",
+        "id": "2023A8PS0294H",
+        "pfp_url": "https://i.imgur.com/9R7JaHf.png",
+        "skill": "Mridangam",
+        "contact": {
+            "email": "f20230294@hyderabad.bits-pilani.ac.in",
+            "phone": "7770005773",
+            "github": "",
+            "insta": ""
+        },
+        "tags": { "cat": "Music", "bat": "2023", "pos": "Member" },
+        "text": ""
+    },
+    {
+        "name": "Varun Prakash",
+        "id": "2022A8PS1542H",
+        "pfp_url": "https://i.imgur.com/rRqVfju.png",
+        "skill": "Drums",
+        "contact": {
+            "email": "varunprakash5269@gmail.com",
+            "phone": "7975519124",
+            "github": "",
+            "insta": "varunbbz_52"
+        },
+        "tags": { "cat": "Music", "bat": "2022", "pos": "Member" },
+        "text": ""
+    },
+    {
+        "name": "Esha Shekar",
+        "id": "2020B1TS1334H",
+        "pfp_url": "https://i.imgur.com/saQdVrh.png",
+        "skill": "Bharatanatyam",
+        "contact": {
+            "email": "f20201334@hyderabad.bits-pilani.ac.in",
+            "phone": "9108809372",
+            "github": "",
+            "insta": "peachteapetals"
+        },
+        "tags": { "cat": "Dance", "bat": "2020", "pos": "Member" },
         "text": ""
     }
 ]
