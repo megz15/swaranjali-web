@@ -56,7 +56,7 @@
 
             <div class="flex gap-1">
                 {#if contact.phone.length != 0}
-                    <a href="tel:{contact.phone}">
+                    <a href="https://wa.me/91{contact.phone}">
                         <img src="{waLogo}" alt="WA" class="h-8">
                     </a>
                 {/if}

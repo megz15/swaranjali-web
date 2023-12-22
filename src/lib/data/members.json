@@ -264,5 +264,33 @@
         },
         "tags": { "cat": "Dance", "bat": "2020", "pos": "Member" },
         "text": ""
+    },
+    {
+        "name": "Hrishikesh MK",
+        "id": "2022A7PS1538H",
+        "pfp_url": "https://i.imgur.com/0Ak7isp.png",
+        "skill": "Violin",
+        "contact": {
+            "email": "f20221538@hyderabad.bits-pilani.ac.in",
+            "phone": "",
+            "github": "",
+            "insta": ""
+        },
+        "tags": { "cat": "Music", "bat": "2022", "pos": "Enthusiast" },
+        "text": ""
+    },
+    {
+        "name": "Pranathi sri sai Potluri",
+        "id": "2022B1A41768",
+        "pfp_url": "https://i.imgur.com/1gRChtK.png",
+        "skill": "Kuchipudi",
+        "contact": {
+            "email": "f20221768@hyderabad.bits-pilani.ac.in",
+            "phone": "9121018364",
+            "github": "",
+            "insta": "pranathi_p_"
+        },
+        "tags": { "cat": "Dance", "bat": "2020", "pos": "Member" },
+        "text": ""
     }
 ]
