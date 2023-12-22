@@ -32,7 +32,7 @@
     >
         <div class="flex gap-5 items-center">
             <!-- <div class="min-w-max"> -->
-            <img src={pfp_url} alt={name} width="120px" class="rounded-full" />
+            <img src={pfp_url?pfp_url:"https://i.imgur.com/0Ak7isp.png"} alt={name} width="120px" class="rounded-full" />
             <!-- </div> -->
 
             <div class="flex flex-col justify-center">
@@ -48,7 +48,11 @@
         <div class="flex flex-wrap mt-4 justify-between">
             <div class="flex gap-1">
                 <!-- <Badge large color="yellow" class="text-lg px-2">{tags.cat}</Badge> -->
-                <!-- <Badge large color="green" class="text-lg px-2">{tags.bat}</Badge> -->
+
+                {#if skill.split(",").length == 1}
+                    <Badge large color="green" class="text-lg h-8">{tags.bat}</Badge>
+                {/if}
+
                 {#each skill.split(",") as s}
                     <Badge large color="yellow" class="text-lg h-8">{s}</Badge>
                 {/each}
