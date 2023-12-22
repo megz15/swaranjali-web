@@ -26,13 +26,25 @@
     // }
 </script>
 
-<main class="hidden md:block">
-    <div class="nav-links {position} dark">
-        {#each navLinks as navLink}
-            <a href={`/${navLink == "Home" ? '' : navLink.toLowerCase()}`} class:active={pageIndex == navLink}>{navLink}</a>
-        {/each}
-    </div>
-</main>
+{#if position=="top"}
+    <main class="hidden md:block">
+        <div class="nav-links {position} dark">
+            {#each navLinks as navLink}
+                <a href={`/${navLink == "Home" ? '' : navLink.toLowerCase()}`} class:active={pageIndex == navLink}>{navLink}</a>
+            {/each}
+        </div>
+    </main>
+{/if}
+
+{#if position=="bottom"}
+    <main class="md:hidden">
+        <div class="nav-links {position} dark">
+            <a href={`/`} class:active={pageIndex == "Home"}>Home</a>
+            <a href={`/members`} class:active={pageIndex == "Members"}>Members</a>
+            <a href={`/naadgen`} class:active={pageIndex == "Naadgen"}>NaadGen</a>
+        </div>
+    </main>
+{/if}
 
 <style>
     .nav-links {
@@ -49,8 +61,8 @@
         transition: bottom 0.3s ease-in-out;
     }
 
-    .bottom { bottom: 3%; }
-    .top { bottom: 90%; }
+    .bottom { bottom: 30px; }
+    .top { top: 20px; }
 
     .dark { background: #1d2230b9 }
     .light { background: rgba(255, 255, 255, 0.5); }

@@ -6,8 +6,6 @@
     import RadioPlayer from "$lib/components/radio_player.svelte";
     import NavBar from "$lib/components/navbar.svelte";
 
-    import { page } from "$app/stores";
-
 </script>
 
 <div
@@ -33,7 +31,10 @@
     </Navbar> -->
 
     <div class="md:hidden">
-        <BottomNav classOuter="w-max bg-[#1d2230b9] backdrop-blur border-0 rounded-lg shadow shadow-black h-28 text-xl" position="fixed" classInner="grid-cols-3 text-white" navType="application">
+
+        <NavBar position="bottom" />
+
+        <!-- <BottomNav classOuter="w-max bg-[#1d2230b9] backdrop-blur border-0 rounded-lg shadow shadow-black h-28 text-xl" position="fixed" classInner="grid-cols-3 text-white" navType="application">
             <BottomNavItem btnName="Home" href="/">
                 🏠️
             </BottomNavItem>
@@ -52,7 +53,7 @@
             <BottomNavItem btnName="Recordings" href="/recordings">
                 🎻
             </BottomNavItem>
-        </BottomNav>
+        </BottomNav> -->
     </div>
 
     <RadioPlayer />
