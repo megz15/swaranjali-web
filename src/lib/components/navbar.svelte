@@ -2,7 +2,7 @@
     import { page } from "$app/stores";
 
 
-    // import { browser } from '$app/environment';
+    // import { browser } from "$app/environment";
     
     $: currentPage = $page.route.id ?? "/";
     $: pageIndex = currentPage == "/"
@@ -10,17 +10,17 @@
             : currentPage[1].toUpperCase() + currentPage.slice(2);
     export let position:string;
 
-    const navLinks:string[] = ['Home', 'Members', 'Naadgen', 'Drive', 'Social', "Recordings"];
+    const navLinks:string[] = ["Home", "Members", "NaadGen", "Wiki", "RagaScript", "Drive"];
     // let isScrolled:boolean = false;
 
     // if (browser) {
-    //     window.addEventListener('scroll', () => {
+    //     window.addEventListener("scroll", () => {
     //         if (window.scrollY > 100) {
     //             isScrolled = true;
-    //             position = 'top';
+    //             position = "top";
     //         } else {
     //             isScrolled = false;
-    //             position = 'bottom';
+    //             position = "bottom";
     //         }
     //     });
     // }
@@ -28,9 +28,9 @@
 
 {#if position=="top"}
     <main class="hidden md:block">
-        <div class="nav-links {position} dark">
+        <div class="nav-links {position} dark w-[55%]">
             {#each navLinks as navLink}
-                <a href={`/${navLink == "Home" ? '' : navLink.toLowerCase()}`} class:active={pageIndex == navLink}>{navLink}</a>
+                <a href={`/${navLink == "Home" ? "" : navLink.toLowerCase()}`} class:active={pageIndex == navLink}>{navLink}</a>
             {/each}
         </div>
     </main>
@@ -38,10 +38,10 @@
 
 {#if position=="bottom"}
     <main class="md:hidden">
-        <div class="nav-links {position} dark">
-            <a href={`/`} class:active={pageIndex == "Home"}>Home</a>
-            <a href={`/members`} class:active={pageIndex == "Members"}>Members</a>
-            <a href={`/naadgen`} class:active={pageIndex == "Naadgen"}>NaadGen</a>
+        <div class="nav-links {position} dark w-[80%]">
+            {#each navLinks.slice(0,4) as navLink}
+                <a href={`/${navLink == "Home" ? "" : navLink.toLowerCase()}`} class:active={pageIndex == navLink}>{navLink}</a>
+            {/each}
         </div>
     </main>
 {/if}
@@ -49,7 +49,6 @@
 <style>
     .nav-links {
         position: fixed;
-        width: 60%;
         left: 50%; transform: translateX(-50%);
         backdrop-filter: blur(6px);
         display: flex;
@@ -78,7 +77,7 @@
     a.active::before, a.active:hover::before { all: unset; }
 
     a::before {
-        content: '';
+        content: "";
         position: absolute;
         width: 100%;
         height: 3px;
