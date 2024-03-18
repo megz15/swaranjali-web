@@ -1,5 +1,23 @@
 [
     {
+        "pfp_url": "https://i.imgur.com/nmaoCyr.png",
+        "position": "Music Head + Deverloper",
+        "tags": { "cat": "Music", "bat": "2022", "pos": "Enthusiast" },
+        "names": [
+            "Meghraj Goswami",
+            "Enthu (n=3.5)x",
+            "feeeeeeeeeet",
+            "Meghlite Noswami",
+            "$aroj Manoj",
+            "Meghu Rajan",
+            "Meghraj W Ami",
+            "Goaswami",
+            "Bhagraj Gayaswami",
+            "Kidraj Growswami",
+            "undefined"
+        ]
+    },
+    {
         "pfp_url": "https://i.imgur.com/WspOiaD.png",
         "position": "Secretary",
         "tags": { "cat": "Music", "bat": "2021", "pos": "Senate" },
@@ -68,15 +86,6 @@
         ]
     },
     {
-        "pfp_url": "https://i.imgur.com/1Q6CGcA.png",
-        "position": "Dance Head",
-        "tags": { "cat": "Dance", "bat": "2022", "pos": "Member" },
-        "names": [
-            "Aishwarya Reddy",
-            "undefined"
-        ]
-    },
-    {
         "pfp_url": "https://i.imgur.com/m3wI8ZH.png",
         "position": "Media Head",
         "tags": { "cat": "Music", "bat": "2022", "pos": "Member" },
@@ -108,24 +117,6 @@
             "Ramashankar D",
             "Rum-a-coke-na",
             "Lactose Tolerator",
-            "undefined"
-        ]
-    },
-    {
-        "pfp_url": "https://i.imgur.com/nmaoCyr.png",
-        "position": "Music Head + Deverloper",
-        "tags": { "cat": "Music", "bat": "2022", "pos": "Enthusiast" },
-        "names": [
-            "Meghraj Goswami",
-            "Enthu (n=3.5)x",
-            "feeeeeeeeeet",
-            "Meghlite Noswami",
-            "$aroj Manoj",
-            "Meghu Rajan",
-            "Meghraj W Ami",
-            "Goaswami",
-            "Bhagraj Gayaswami",
-            "Kidraj Growswami",
             "undefined"
         ]
     }
