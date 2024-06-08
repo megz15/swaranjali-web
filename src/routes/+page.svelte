@@ -14,7 +14,7 @@
     import danceHeroThree from "$lib/assets/opt-hero-bg/dance_3.jpg";
 
     import MemberCard from "$lib/components/por_member_card.svelte";
-    import memberData from "$lib/data/senate-members.json";
+    import memberData from "$lib/data/senate-members-2023.json";
 
     const fadeAnimation = (x: Element) => fade(x, { duration: 300 });
 
