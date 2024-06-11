@@ -16,6 +16,7 @@
     import MemberCard from "$lib/components/por_member_card.svelte"
     import memberData2023 from "$lib/data/senate-members-2023.json"
     import memberData2024 from "$lib/data/senate-members-2024.json"
+    import { onMount } from "svelte"
 
     const fadeAnimation = (x: Element) => fade(x, { duration: 300 })
 
@@ -30,6 +31,19 @@
 
     let selectedBatch = 2023
     let memberData = memberData2023
+    let heroHeightStyle = "height: 100vh"
+
+    function updateHeight() {
+        heroHeightStyle = `height:${window.innerWidth<500?60:100}vh`
+    }
+
+    onMount(() => {
+        updateHeight()
+        window.addEventListener('resize', updateHeight)
+        return () => {
+            window.removeEventListener('resize', updateHeight)
+        }
+    })
 </script>
 
 <svelte:head>
@@ -48,9 +62,9 @@
         transition={fadeAnimation}
         let:Indicators
         let:Controls
-        duration={3000}
+        duration={4000}
         class="rounded-none shadow-lg shadow-black"
-        style="height: 100vh"
+        style={heroHeightStyle}
     >
         <Indicators />
         <Controls />
@@ -60,6 +74,10 @@
     <!-- <div id="caption" class="backdrop-blur-[2px]">
         {image?.alt}
     </div> -->
+
+    <section class="bg-sky-50 text-center shadow shadow-black">
+        <h2 class="text-lg p-10">The Indian Music and Classical Dance club of BITS Pilani, Hyderabad Campus</h2>
+    </section>
 
     <section class="backdrop-blur text-center shadow shadow-black">
         <figure class="mx-auto p-4 max-w-screen-md">
