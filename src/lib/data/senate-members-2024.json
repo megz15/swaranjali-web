@@ -1,0 +1,78 @@
+[
+    {
+        "pfp_url": "https://i.imgur.com/Uef3EYj.png",
+        "position": "Music Secretary",
+        "tags": { "cat": "Music", "bat": "2022", "pos": "Senate" },
+        "names": [
+            "Anvik Ghosh",
+            "Onabheek"
+        ]
+    },
+    {
+        "pfp_url": "https://i.imgur.com/L08nSl9.png",
+        "position": "Developer",
+        "tags": { "cat": "Music", "bat": "2022", "pos": "Enthusiast" },
+        "names": [
+            "Meghraj Goswami",
+            "Enthuty"
+        ]
+    },
+    {
+        "pfp_url": "https://i.imgur.com/Y6JH6TX.png",
+        "position": "Dance Secretary",
+        "tags": { "cat": "Dance", "bat": "2022", "pos": "Senate" },
+        "names": [
+            "Khushi Kamtam",
+            "feetity"
+        ]
+    },
+    {
+        "pfp_url": "https://i.imgur.com/AE65Mts.png",
+        "position": "Treasurer",
+        "tags": { "cat": "Music", "bat": "2023", "pos": "Senate" },
+        "names": [
+            "Shrikhar Giridharan"
+        ]
+    },
+    {
+        "pfp_url": "https://i.imgur.com/OrRT5n0.png",
+        "position": "Music Head",
+        "tags": { "cat": "Music", "bat": "2023", "pos": "Member" },
+        "names": [
+            "Rakthaksh"
+        ]
+    },
+    {
+        "pfp_url": "https://i.imgur.com/7r4c5eY.png",
+        "position": "Dance Head",
+        "tags": { "cat": "Dance", "bat": "2023", "pos": "Member" },
+        "names": [
+            "Deepthi Ajith"
+        ]
+    },
+    {
+        "pfp_url": "https://i.imgur.com/1gRChtK.png",
+        "position": "Dance Head",
+        "tags": { "cat": "Dance", "bat": "2022", "pos": "Member" },
+        "names": [
+            "Pranathi Potluri"
+        ]
+    },
+    {
+        "pfp_url": "https://i.imgur.com/WspOiaD.png",
+        "position": "Ex Secretary",
+        "tags": { "cat": "Music", "bat": "2021", "pos": "FOMO" },
+        "names": [
+            "Muruga Perumal",
+            "Secy Daddy"
+        ]
+    },
+    {
+        "pfp_url": "https://i.imgur.com/5dKVI5o.png",
+        "position": "Ex Joint Secretary",
+        "tags": { "cat": "Music", "bat": "2021", "pos": "FOMO" },
+        "names": [
+            "Antara Ghosh"
+        ]
+    }
+]
