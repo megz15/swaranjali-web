@@ -1,22 +1,23 @@
 <script lang="ts">
-    import { Avatar, Carousel, Blockquote } from "flowbite-svelte";
-    import { fade } from "svelte/transition";
+    import { Avatar, Carousel, Blockquote, ButtonGroup, Button } from "flowbite-svelte"
+    import { fade } from "svelte/transition"
 
-    import logo from "$lib/assets/logo.png";
-    import quote_image from "$lib/assets/quote.png";
+    import logo from "$lib/assets/logo.png"
+    import quote_image from "$lib/assets/quote.png"
 
-    import musicHeroOne from "$lib/assets/opt-hero-bg/music_1_1.jpg";
-    import musicHeroTwo from "$lib/assets/opt-hero-bg/music_2.jpg";
-    import musicHeroThree from "$lib/assets/opt-hero-bg/music_3.jpg";
+    import musicHeroOne from "$lib/assets/opt-hero-bg/music_1_1.jpg"
+    import musicHeroTwo from "$lib/assets/opt-hero-bg/music_2.jpg"
+    import musicHeroThree from "$lib/assets/opt-hero-bg/music_3.jpg"
 
-    import danceHeroOne from "$lib/assets/opt-hero-bg/dance_1.jpg";
-    import danceHeroTwo from "$lib/assets/opt-hero-bg/dance_2.jpg";
-    import danceHeroThree from "$lib/assets/opt-hero-bg/dance_3.jpg";
+    import danceHeroOne from "$lib/assets/opt-hero-bg/dance_1.jpg"
+    import danceHeroTwo from "$lib/assets/opt-hero-bg/dance_2.jpg"
+    import danceHeroThree from "$lib/assets/opt-hero-bg/dance_3.jpg"
 
-    import MemberCard from "$lib/components/por_member_card.svelte";
-    import memberData from "$lib/data/senate-members-2023.json";
+    import MemberCard from "$lib/components/por_member_card.svelte"
+    import memberData2023 from "$lib/data/senate-members-2023.json"
+    import memberData2024 from "$lib/data/senate-members-2024.json"
 
-    const fadeAnimation = (x: Element) => fade(x, { duration: 300 });
+    const fadeAnimation = (x: Element) => fade(x, { duration: 300 })
 
     const images = [
         { src: musicHeroOne, alt: "Pearl 2023 Inauguration - Unnai Kaanadhu" },
@@ -25,7 +26,10 @@
         { src: danceHeroTwo, alt: "A" },
         { src: musicHeroThree, alt: "B" },
         { src: danceHeroThree, alt: "C" },
-    ];
+    ]
+
+    let selectedBatch = 2024
+    let memberData = memberData2024
 </script>
 
 <svelte:head>
@@ -46,7 +50,7 @@
         let:Controls
         duration={3000}
         class="rounded-none shadow-lg shadow-black"
-        style="height: 100vh;"
+        style="height: 100vh"
     >
         <Indicators />
         <Controls />
@@ -82,15 +86,33 @@
         </figure>
     </section>
 
-    <section id="members-section">
-        {#each memberData as member, i}
-            <MemberCard
-                pfp_url={member.pfp_url}
-                position={member.position}
-                tags={member.tags}
-                names={member.names}
-            />
-        {/each}
+    <section class="flex flex-col my-5 gap-5 items-center">
+        
+        <ButtonGroup class="text-lg">
+            <Button class="text-xl px-10 py-3" color={selectedBatch == 2024 ? "purple" : "dark"} on:click={
+                () => {
+                    selectedBatch = 2024
+                    memberData = memberData2024
+                }
+            }>2024</Button>
+            <Button class="text-xl px-10 py-3" color={selectedBatch == 2023 ? "purple" : "dark"} on:click={
+                () => {
+                    selectedBatch = 2023
+                    memberData = memberData2023
+                }
+            }>2023</Button>
+        </ButtonGroup>
+
+        <section class="flex flex-wrap justify-center gap-5">
+            {#each memberData as member}
+                <MemberCard
+                    pfp_url={member.pfp_url}
+                    position={member.position}
+                    tags={member.tags}
+                    names={member.names}
+                />
+            {/each}
+        </section>
     </section>
 </main>
 
@@ -107,12 +129,5 @@
         left: 50%;
         transform: translateX(-50%) translateY(75%);
         z-index: 1;
-    }
-    #members-section {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        padding-block: 40px;
     }
 </style>
