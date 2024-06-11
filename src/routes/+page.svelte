@@ -28,8 +28,8 @@
         { src: danceHeroThree, alt: "C" },
     ]
 
-    let selectedBatch = 2024
-    let memberData = memberData2024
+    let selectedBatch = 2023
+    let memberData = memberData2023
 </script>
 
 <svelte:head>
@@ -104,14 +104,28 @@
         </ButtonGroup>
 
         <section class="flex flex-wrap justify-center gap-5">
-            {#each memberData as member}
+
+            {#if selectedBatch == 2024}
                 <MemberCard
-                    pfp_url={member.pfp_url}
-                    position={member.position}
-                    tags={member.tags}
-                    names={member.names}
+                    pfp_url="https://i.imgur.com/uoJcpoY.png"
+                    position="Overlord Supreme"
+                    tags={{
+                        cat: "T",
+                        bat: "B",
+                        pos: "A"
+                    }}
+                    names={["Tux"]}
                 />
-            {/each}
+            {:else}
+                {#each memberData as member}
+                    <MemberCard
+                        pfp_url={member.pfp_url}
+                        position={member.position}
+                        tags={member.tags}
+                        names={member.names}
+                    />
+                {/each}
+            {/if}
         </section>
     </section>
 </main>
