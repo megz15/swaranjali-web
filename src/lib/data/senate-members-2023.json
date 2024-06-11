@@ -1,23 +1,5 @@
 [
     {
-        "pfp_url": "https://i.imgur.com/nmaoCyr.png",
-        "position": "Music Head + Deverloper",
-        "tags": { "cat": "Music", "bat": "2022", "pos": "Enthusiast" },
-        "names": [
-            "Meghraj Goswami",
-            "Enthu (n=3.5)x",
-            "feeeeeeeeeet",
-            "Meghlite Noswami",
-            "$aroj Manoj",
-            "Meghu Rajan",
-            "Meghraj W Ami",
-            "Goaswami",
-            "Bhagraj Gayaswami",
-            "Kidraj Growswami",
-            "undefined"
-        ]
-    },
-    {
         "pfp_url": "https://i.imgur.com/WspOiaD.png",
         "position": "Secretary",
         "tags": { "cat": "Music", "bat": "2021", "pos": "Senate" },
@@ -36,6 +18,24 @@
             "Myopia Perumal",
             "Maître de Perumal",
             "Mamata Perumal",
+            "undefined"
+        ]
+    },
+    {
+        "pfp_url": "https://i.imgur.com/nmaoCyr.png",
+        "position": "Music Head + Deverloper",
+        "tags": { "cat": "Music", "bat": "2022", "pos": "Enthusiast" },
+        "names": [
+            "Meghraj Goswami",
+            "Enthu (n=3.5)x",
+            "feeeeeeeeeet",
+            "Meghlite Noswami",
+            "$aroj Manoj",
+            "Meghu Rajan",
+            "Meghraj W Ami",
+            "Goaswami",
+            "Bhagraj Gayaswami",
+            "Kidraj Growswami",
             "undefined"
         ]
     },
