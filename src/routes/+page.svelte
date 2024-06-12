@@ -75,8 +75,10 @@
         {image?.alt}
     </div> -->
 
-    <section class="bg-sky-50 text-center shadow shadow-black">
-        <h2 class="text-lg p-10">The Indian Music and Classical Dance club of BITS Pilani, Hyderabad Campus</h2>
+    <section class="bg-sky-50 text-center shadow shadow-black p-10">
+        <p class="text-lg">The Indian Music and Classical Dance club of BITS Pilani, Hyderabad Campus</p>
+        <p class="text-lg">-</p>
+        <p class="text-lg">Lorem ipsum dolor sit amet</p>
     </section>
 
     <section class="backdrop-blur text-center shadow shadow-black">
