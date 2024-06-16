@@ -33,7 +33,7 @@
         transition: bottom 0.3s ease-in-out;
     }
 
-    .bottom { bottom: 30px; }
+    .bottom { bottom: 55px; }
     .top { top: 20px; }
 
     .dark { background: #1d2230b9 }
