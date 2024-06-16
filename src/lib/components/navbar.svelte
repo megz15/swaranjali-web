@@ -1,8 +1,5 @@
 <script lang="ts">
     import { page } from "$app/stores";
-
-
-    // import { browser } from "$app/environment";
     
     $: currentPage = $page.route.id ?? "/";
     $: pageIndex = currentPage == "/"
@@ -10,41 +7,17 @@
             : currentPage[1].toUpperCase() + currentPage.slice(2);
     export let position:string;
 
-    const navLinks:string[] = ["Home", "Members", "NaadGen", "Wiki", "RagaScript", "Drive"];
-    // let isScrolled:boolean = false;
-
-    // if (browser) {
-    //     window.addEventListener("scroll", () => {
-    //         if (window.scrollY > 100) {
-    //             isScrolled = true;
-    //             position = "top";
-    //         } else {
-    //             isScrolled = false;
-    //             position = "bottom";
-    //         }
-    //     });
-    // }
+    const navLinks:string[] = ["Home", "Members", "NaadGen", "Wiki", "Drive"];
 </script>
 
-{#if position=="top"}
-    <main class="hidden md:block">
-        <div class="nav-links {position} dark w-[55%]">
-            {#each navLinks as navLink}
-                <a href={`/${navLink == "Home" ? "" : navLink.toLowerCase()}`} class:active={pageIndex == navLink}>{navLink}</a>
-            {/each}
-        </div>
-    </main>
-{/if}
 
-{#if position=="bottom"}
-    <main class="md:hidden">
-        <div class="nav-links {position} dark w-[80%]">
-            {#each navLinks.slice(0,4) as navLink}
-                <a href={`/${navLink == "Home" ? "" : navLink.toLowerCase()}`} class:active={pageIndex == navLink}>{navLink}</a>
-            {/each}
-        </div>
-    </main>
-{/if}
+<main class={position == "top" ? "hidden md:block" : "md:hidden"}>
+    <div class="nav-links {position} dark {position == "top" ? "w-[50%]" : "w-[90%]"}">
+        {#each navLinks as navLink}
+            <a href={`/${navLink == "Home" ? "" : navLink.toLowerCase()}`} class:active={pageIndex == navLink}>{navLink}</a>
+        {/each}
+    </div>
+</main>
 
 <style>
     .nav-links {
