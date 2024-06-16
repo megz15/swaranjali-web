@@ -4,6 +4,7 @@
     const metaUrl = `https://proxy.radiojar.com/api/stations/${stationId}/now_playing/`
 
     let isPlaying = false
+    const corsToken = process.env.CORS_TOKEN
 
     let radioElement: HTMLAudioElement
     let cardDivElement: HTMLDivElement
@@ -40,7 +41,7 @@
         // Get stream metadata
         fetch(`https://proxy.cors.sh/${metaUrl}`, {
             headers: {
-                'x-cors-api-key': '54ac7be2-24cb-48e5-8c07-e4037748aa7b',
+                'x-cors-api-key': corsToken,
             }
         }).then(res => res.json()).then(data => {
             thumb = data["thumb"]
