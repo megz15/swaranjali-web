@@ -38,10 +38,10 @@
 
         fetch("/api/getStreamMetadata").then(res => res.json()).then(
             res => {
-                thumb = res["thumb"]
-                title = res["artist"]
-                artist = res["title"]
-                extra = res["album"]
+                if (res["thumb"]) thumb = res["thumb"]
+                if (res["artist"]) title = res["artist"]
+                if (res["title"]) artist = res["title"]
+                if (res["album"]) extra = res["album"]
             }
         )
 
