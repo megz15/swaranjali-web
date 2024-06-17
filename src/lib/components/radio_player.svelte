@@ -1,10 +1,8 @@
 <script lang="ts">
-    const stationId = "7mh06pa8uwzuv"
-    const radioUrl = `https://n08.radiojar.com/${stationId}.mp3`
-    const metaUrl = `https://proxy.radiojar.com/api/stations/${stationId}/now_playing/`
+
+    const radioUrl = "https://n08.radiojar.com/7mh06pa8uwzuv.mp3"
 
     let isPlaying = false
-    const corsToken = process.env.CORS_TOKEN
 
     let radioElement: HTMLAudioElement
     let cardDivElement: HTMLDivElement
@@ -36,19 +34,16 @@
         toggleControl.textContent = toggleControl.textContent == "➖" ? "➕" : "➖"
     }
 
-    function playPause() {
+    async function playPause() {
 
-        // Get stream metadata
-        fetch(`https://proxy.cors.sh/${metaUrl}`, {
-            headers: {
-                'x-cors-api-key': corsToken,
+        fetch("/api/getStreamMetadata").then(res => res.json()).then(
+            res => {
+                thumb = res["thumb"]
+                title = res["artist"]
+                artist = res["title"]
+                extra = res["album"]
             }
-        }).then(res => res.json()).then(data => {
-            thumb = data["thumb"]
-            title = data["artist"]
-            artist = data["title"]
-            extra = data["album"]
-        }).catch(e => console.log(e ))
+        )
 
         isPlaying ? radioElement.pause() : radioElement.play()
         isPlaying = !isPlaying
@@ -82,10 +77,10 @@
         <div class="flex gap-5 items-center">
             <img bind:this={thumbElement} src="{thumb}" width="100px" class="rounded-lg border-2 border-gray-400" />
 
-            <div class="flex flex-col justify-center">
+            <div class="flex flex-col justify-center items-end text-end">
                 <div bind:this={titleElement} class="text-white font-semibold">{title}</div>
                 <div bind:this={artistElement} class="text-white font-semibold">~ {artist}</div>
-                <div bind:this={extraElement} class="text-gray-300 font-semibold max-w-[180px] break-normal">
+                <div bind:this={extraElement} class="text-gray-300 font-semibold">
                     {#if extra}
                         {extra}
                     {:else}
