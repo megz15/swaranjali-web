@@ -1,10 +1,15 @@
 <script lang="ts">
-    import "../app.postcss";
-    import { Button, Modal } from "flowbite-svelte";
-    import glyphImage from "$lib/assets/glyphs.png";
+    import "../app.postcss"
+    import { Button, Modal, Popover } from "flowbite-svelte"
+    import glyphImage from "$lib/assets/glyphs.png"
 
-    import RadioPlayer from "$lib/components/radio_player.svelte";
-    import NavBar from "$lib/components/navbar.svelte";
+    import RadioPlayer from "$lib/components/radio_player.svelte"
+    import NavBar from "$lib/components/navbar.svelte"
+
+    import waLogo from "$lib/assets/social/whatsapp.png"
+    import ghLogo from "$lib/assets/social/github.png"
+    import igLogo from "$lib/assets/social/insta.png"
+    import emLogo from "$lib/assets/social/mail.png"
 </script>
 
 <Modal class="dark" title="🚧 Swaranjali Web: Under Construction! 🚧" open autoclose outsideclose>
@@ -70,8 +75,25 @@
 
     <slot />
 
-    <div class="h-16 flex items-center justify-center text-center bg-[#1d2230b9] text-white backdrop-blur">
-        Made with 👣 and 💙 by <a href="https://github.com/megz15" class="pl-3 text-yellow-300 font-semibold transition duration-200 hover:text-orange-400">Meghraj Goswami</a>
+    <div class="z-40 relative bg-[#1d2230b9] text-white backdrop-blur py-5 text-center">
+        Made with 👣 and 💙 by<span id="megh" class="pl-3 text-yellow-300 font-semibold transition duration-200 hover:text-orange-400">Meghraj Goswami</span>
+
+        <Popover triggeredBy="#megh" trigger="click" class="flex flex-col gap-5 items-center p-5 bg-[#1d2230b9] rounded-lg backdrop-blur shadow shadow-black border-2 border-gray-400">
+            <div class="flex gap-2">
+                <a href="https://www.github.com/megz15">
+                    <img src="{ghLogo}" alt="GH" class="max-w-20">
+                </a>
+                <a href="https://www.instagram.com/megh.835">
+                    <img src="{igLogo}" alt="IG" class="max-w-20">
+                </a>
+                <a href="https://wa.me/918383846288">
+                    <img src="{waLogo}" alt="WA" class="max-w-20">
+                </a>
+                <a href="mailto:f20221869@hyderabad.bits-pilani.ac.in">
+                    <img src="{emLogo}" alt="EM" class="max-w-20">
+                </a>
+            </div>
+        </Popover>
     </div>
 
 </div>
