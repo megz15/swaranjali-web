@@ -1,20 +1,19 @@
 <script lang="ts">
-    import { page } from "$app/stores";
+    import { page } from "$app/stores"
     
-    $: currentPage = $page.route.id ?? "/";
-    $: pageIndex = currentPage == "/"
-            ? "Home"
-            : currentPage[1].toUpperCase() + currentPage.slice(2);
-    export let position:string;
+    $: pageIndex = $page.route.id == "/"
+            ? "home"
+            : ($page.route.id ?? "/").toLowerCase()
+    export let position:string
 
-    const navLinks:string[] = ["Home", "Members", "NaadGen", "Wiki", "Drive"];
+    const navLinks:string[] = ["Home", "Members", "NaadGen", "Wiki", "Drive"]
 </script>
 
 
 <main class={position == "top" ? "hidden md:block" : "md:hidden"}>
     <div class="nav-links {position} dark {position == "top" ? "w-[50%]" : "w-[90%]"}">
         {#each navLinks as navLink}
-            <a href={`/${navLink == "Home" ? "" : navLink.toLowerCase()}`} class:active={pageIndex == navLink}>{navLink}</a>
+            <a href={`/${navLink == "Home" ? "" : navLink.toLowerCase()}`} class:active={pageIndex.slice(1) == navLink.toLowerCase()}>{navLink}</a>
         {/each}
     </div>
 </main>
@@ -28,7 +27,7 @@
         justify-content: space-around;
         border-radius: 10px;
         padding: 10px;
-        z-index: 1000;
+        z-index: 31;
         transition: top 0.3s ease-in-out;
         transition: bottom 0.3s ease-in-out;
     }
