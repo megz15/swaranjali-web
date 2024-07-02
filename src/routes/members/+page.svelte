@@ -81,7 +81,7 @@
                 (
                     selectedPosition == 'Position' || member.tags.pos == selectedPosition
                     || (selectedPosition == 'Member' || selectedPosition == 'POR')
-                    && (member.tags.pos.endsWith('Head') || member.tags.pos.endsWith('Secretary') || member.tags.pos == 'Treasurer')
+                    && (member.tags.pos.endsWith('Head') || member.tags.pos.endsWith('Secretary') || member.tags.pos == 'Treasurer' || member.name == 'Meghraj Goswami')
                 )
             }
                 <MemberCard

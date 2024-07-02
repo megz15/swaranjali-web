@@ -10,7 +10,7 @@
             "github": "megz15",
             "insta": "megh.835"
         },
-        "tags": { "cat": "Music", "bat": "2022", "pos": "Music Head" },
+        "tags": { "cat": "Music", "bat": "2022", "pos": "Developer" },
         "text": ""
     },
     {
@@ -24,7 +24,7 @@
             "github": "",
             "insta": "the_muruga_perumal"
         },
-        "tags": { "cat": "Music", "bat": "2021", "pos": "Secretary" },
+        "tags": { "cat": "Music", "bat": "2021", "pos": "Member" },
         "text": ""
     },
     {
@@ -38,7 +38,21 @@
             "github": "",
             "insta": ""
         },
-        "tags": { "cat": "Dance", "bat": "2021", "pos": "Joint Secretary" },
+        "tags": { "cat": "Dance", "bat": "2021", "pos": "Member" },
+        "text": ""
+    },
+    {
+        "name": "Anvik Ghosh",
+        "id": "2022A8PS0694H",
+        "pfp_url": "https://i.imgur.com/m3wI8ZH.png",
+        "skill": "Tabla",
+        "contact": {
+            "email": "f20220694@hyderabad.bits-pilani.ac.in",
+            "phone": "9163006564",
+            "github": "",
+            "insta": "onabheek"
+        },
+        "tags": { "cat": "Music", "bat": "2022", "pos": "Music Secretary" },
         "text": ""
     },
     {
@@ -52,7 +66,7 @@
             "github": "",
             "insta": "notmanasvichervela"
         },
-        "tags": { "cat": "Music", "bat": "2022", "pos": "Treasurer" },
+        "tags": { "cat": "Music", "bat": "2022", "pos": "Member" },
         "text": ""
     },
     {
@@ -66,7 +80,7 @@
             "github": "",
             "insta": "khushikamtam"
         },
-        "tags": { "cat": "Dance", "bat": "2022", "pos": "Dance Head" },
+        "tags": { "cat": "Dance", "bat": "2022", "pos": "Dance Secretary" },
         "text": ""
     },
     {
@@ -81,20 +95,6 @@
             "insta": "aishwaryareddy_07"
         },
         "tags": { "cat": "Dance", "bat": "2022", "pos": "Member" },
-        "text": ""
-    },
-    {
-        "name": "Anvik Ghosh",
-        "id": "2022A8PS0694H",
-        "pfp_url": "https://i.imgur.com/m3wI8ZH.png",
-        "skill": "Tabla",
-        "contact": {
-            "email": "f20220694@hyderabad.bits-pilani.ac.in",
-            "phone": "9163006564",
-            "github": "",
-            "insta": "onabheek"
-        },
-        "tags": { "cat": "Music", "bat": "2022", "pos": "Media Head" },
         "text": ""
     },
     {
@@ -290,7 +290,63 @@
             "github": "",
             "insta": "pranathi_p_"
         },
-        "tags": { "cat": "Dance", "bat": "2022", "pos": "Member" },
+        "tags": { "cat": "Dance", "bat": "2022", "pos": "Dance Head" },
+        "text": ""
+    },
+    {
+        "name": "Shrikhar Giridharan",
+        "id": "2023B1PS0973H",
+        "pfp_url": "https://i.imgur.com/AE65Mts.png",
+        "skill": "Vocal",
+        "contact": {
+            "email": "f20230973@hyderabad.bits-pilani.ac.in",
+            "phone": "9686099469",
+            "github": "",
+            "insta": ""
+        },
+        "tags": { "cat": "Music", "bat": "2023", "pos": "Treasurer" },
+        "text": ""
+    },
+    {
+        "name": "Rakthaksh R S",
+        "id": "2023A8PS1314H",
+        "pfp_url": "https://i.imgur.com/OrRT5n0.png",
+        "skill": "Vocal",
+        "contact": {
+            "email": "f20231314@hyderabad.bits-pilani.ac.in",
+            "phone": "7550019765",
+            "github": "",
+            "insta": ""
+        },
+        "tags": { "cat": "Music", "bat": "2023", "pos": "Music Head" },
+        "text": ""
+    },
+    {
+        "name": "Anish Kumar Pidugu",
+        "id": "2023A3PS0317H",
+        "pfp_url": "https://i.imgur.com/GVDPRDm.png",
+        "skill": "Violin",
+        "contact": {
+            "email": "f20230317@hyderabad.bits-pilani.ac.in",
+            "phone": "8179030408",
+            "github": "",
+            "insta": ""
+        },
+        "tags": { "cat": "Music", "bat": "2023", "pos": "Member" },
+        "text": ""
+    },
+    {
+        "name": "Deepthi Ajith",
+        "id": "2023B1PS0826H",
+        "pfp_url": "https://i.imgur.com/7r4c5eY.png",
+        "skill": "Dance",
+        "contact": {
+            "email": "f20230826@hyderabad.bits-pilani.ac.in",
+            "phone": "",
+            "github": "",
+            "insta": ""
+        },
+        "tags": { "cat": "Dance", "bat": "2023", "pos": "Dance Head" },
         "text": ""
     }
 ]

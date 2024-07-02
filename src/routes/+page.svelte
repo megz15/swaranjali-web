@@ -29,8 +29,8 @@
         { src: danceHeroThree, alt: "C" },
     ]
 
-    let selectedBatch = 2023
-    let memberData = memberData2023
+    let selectedBatch = 2024
+    let memberData = memberData2024
     let heroHeightStyle = "height: 100vh"
 
     function updateHeight() {
@@ -109,23 +109,29 @@
     <section class="flex flex-col my-5 gap-5 items-center">
         
         <ButtonGroup class="text-lg">
-            <Button class="text-xl px-10 py-3" color={selectedBatch == 2024 ? "purple" : "dark"} on:click={
-                () => {
-                    selectedBatch = 2024
-                    memberData = memberData2024
-                }
-            }>2024</Button>
             <Button class="text-xl px-10 py-3" color={selectedBatch == 2023 ? "purple" : "dark"} on:click={
                 () => {
                     selectedBatch = 2023
                     memberData = memberData2023
                 }
             }>2023</Button>
+            <Button class="text-xl px-10 py-3" color={selectedBatch == 2024 ? "purple" : "dark"} on:click={
+                () => {
+                    selectedBatch = 2024
+                    memberData = memberData2024
+                }
+            }>2024</Button>
+            <Button class="text-xl px-10 py-3" color={selectedBatch == 2025 ? "purple" : "dark"} on:click={
+                () => {
+                    selectedBatch = 2025
+                    memberData = []
+                }
+            }>2025</Button>
         </ButtonGroup>
 
         <section class="flex flex-wrap justify-center gap-5">
 
-            {#if selectedBatch == 2024}
+            {#if selectedBatch == 2025}
                 <MemberCard
                     pfp_url="https://i.imgur.com/uoJcpoY.png"
                     position="Overlord Supreme"
