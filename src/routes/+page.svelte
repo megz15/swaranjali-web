@@ -134,11 +134,11 @@
             {#if selectedBatch == 2025}
                 <MemberCard
                     pfp_url="https://i.imgur.com/uoJcpoY.png"
-                    position="Overlord Supreme"
+                    position="Dictator Prime"
                     tags={{
                         cat: "T",
                         bat: "B",
-                        pos: "A"
+                        pos: "D"
                     }}
                     names={["Tux"]}
                 />
