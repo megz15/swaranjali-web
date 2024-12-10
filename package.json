@@ -10,19 +10,20 @@
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "^2.1.1",
-    "@sveltejs/kit": "^1.30.3",
-    "autoprefixer": "^10.4.16",
-    "flowbite": "^2.2.1",
-    "flowbite-svelte": "^0.44.21",
-    "postcss": "^8.4.32",
-    "postcss-load-config": "^4.0.2",
-    "svelte": "^4.2.8",
-    "svelte-check": "^3.6.2",
-    "tailwindcss": "^3.4.0",
-    "tslib": "^2.6.2",
-    "typescript": "^5.3.3",
-    "vite": "^4.5.1"
+    "@sveltejs/adapter-auto": "^3.3.1",
+    "@sveltejs/kit": "^2.10.1",
+    "@sveltejs/vite-plugin-svelte": "^5.0.1",
+    "autoprefixer": "^10.4.20",
+    "flowbite": "^2.5.2",
+    "flowbite-svelte": "^0.47.4",
+    "postcss": "^8.4.49",
+    "postcss-load-config": "^6.0.1",
+    "svelte": "^5.10.0",
+    "svelte-check": "^4.1.1",
+    "tailwindcss": "^3.4.16",
+    "tslib": "^2.8.1",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
   },
   "type": "module"
 }

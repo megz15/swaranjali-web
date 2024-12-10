@@ -13,13 +13,12 @@
 </script>
 
 <Modal class="dark" title="🚧 Swaranjali Web: Under Construction! 🚧" open autoclose outsideclose>
-    <p>It's great that you're interested in Swaranjali, but the website is not complete yet. I'm working on it whenever I get time, and with midsemester examinations it will take a while to deliver a polished thing.</p>
-    <p>In the meantime, feel free to explore the partially built site to get a taste of what's to come :) It's best viewed on bigger screens, it hasn't been optimized a lot for mobile yet.</p>
-    <p>If you find any bugs or have suggestions for improvement, please don't hesitate to <a href="https://github.com/megz15/swaranjali-web/issues" class="text-blue-600" target="_blank">open a GitHub issue by clicking here.</a></p>
+    <p>Welcome to Swaranjai Web! The site is still a work in progress (slow progress but progress nonetheless). As a solo developer in my third year, it might take some time to realize the final polished version.</p>
+    <p>In the meantime, feel free to explore this partially built site and get a glimpse of what's to come :) (best viewed on larger screens for now)</p>
+    <p>If you find bugs or have suggestions for improvement, <a href="https://github.com/megz15/swaranjali-web/issues" class="text-blue-600" target="_blank">reach out via a GitHub issue by clicking here.</a></p>
     <p>~ Meghraj</p>
     <svelte:fragment slot="footer">
-        <Button>Understandable, have a nice day</Button>
-        <!-- <Button color="alternative">Skill</Button> -->
+        <Button>we got bro coding again before gta6</Button>
     </svelte:fragment>
 </Modal>
 
