@@ -17,10 +17,10 @@
 
     let thumb: string = "https://www.sangeetsamvaad.com/images/favicon.png"
     let title: string = "Sangeet Samvaad"
-    let artist: string = "Meghraj"
-    let extra: string = ""
+    let artist: string = "Online Radio"
+    let extra: string = "Click \"-\" to minimize"
     let currentTime: string = "00:00"
-    let duration: string = "00:00"
+    let duration: string = "08:35"
 
     function togglePlayer() {
         thumbElement.toggleAttribute("hidden")
