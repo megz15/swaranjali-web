@@ -1,6 +1,4 @@
 <script lang="ts">
-    import { Card, Badge } from "flowbite-svelte";
-
     import waLogo from "$lib/assets/social/whatsapp.png";
     import ghLogo from "$lib/assets/social/github.png";
     import igLogo from "$lib/assets/social/insta.png";
@@ -27,8 +25,8 @@
 </script>
 
 <main>
-    <Card
-        class="bg-[#12121fcc] rounded-lg backdrop-blur-sm border-0 h-full w-screen"
+    <div
+        class="block max-w-sm p-6 bg-[#12121fcc] rounded-lg backdrop-blur-sm border-0 h-full w-screen"
     >
         <div class="flex gap-5 items-center">
             <!-- <div class="min-w-max"> -->
@@ -47,14 +45,13 @@
 
         <div class="flex flex-wrap mt-4 justify-between">
             <div class="flex gap-1">
-                <!-- <Badge large color="yellow" class="text-lg px-2">{tags.cat}</Badge> -->
 
                 {#if skill.split(",").length == 1}
-                    <Badge large color="green" class="text-lg h-8">{tags.bat}</Badge>
+                    <div class="bg-green-100 text-green-800 font-medium px-2.5 py-0.5 rounded text-lg h-8">{tags.bat}</div>
                 {/if}
 
                 {#each skill.split(",") as s}
-                    <Badge large color="yellow" class="text-lg h-8">{s}</Badge>
+                    <div class="bg-yellow-100 text-yellow-800 font-medium px-2.5 py-0.5 rounded text-lg h-8">{s}</div>
                 {/each}
             </div>
 
@@ -86,5 +83,5 @@
             <div class="text-gray-300 mt-8">{text}</div>
         {/if}
 
-    </Card>
+    </div>
 </main>

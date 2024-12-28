@@ -1,7 +1,7 @@
 <script lang="ts">
     import MemberCard from "$lib/components/gen_member_card.svelte"
     import memberData from "$lib/data/members.json"
-    import { Select, Card } from 'flowbite-svelte'
+    import { Select } from "flowbite-svelte"
     import { onMount } from 'svelte'
 
     let selectedDomain = 'Domain'
@@ -60,8 +60,8 @@
     onMount(() => shuffledMembers = shuffleArray([...memberData]))
 </script>
 
-<Card
-    class="fixed z-[45] m-2 bg-[#1d2230b9] rounded-lg backdrop-blur shadow shadow-black md:bottom-0"
+<div
+    class="p-5 border-2 border-gray-400 fixed z-[45] m-2 bg-[#1d2230b9] rounded-lg backdrop-blur shadow shadow-black md:bottom-0"
 >
     <div class="h-28 flex flex-col justify-between">
         <Select class="h-8 py-0" items={domain} bind:value={selectedDomain} placeholder="Choose" />
@@ -71,7 +71,7 @@
         </div>
         <Select class="h-8 py-0" items={position} bind:value={selectedPosition} placeholder="Choose" />
     </div>
-</Card>
+</div>
 
 <main class="min-h-[calc(100vh-4rem)] pt-40 md:pt-20 pb-8">
     <div class="flex flex-wrap justify-center gap-5 items-stretch">
